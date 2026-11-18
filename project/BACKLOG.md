@@ -17,3 +17,5 @@ These are candidate outcomes, not automatic authority to spend, contact people, 
 | GOV01 | Before outside merges | Maintainer decision needed | Inspect current branch/ruleset settings and choose required checks/reviews and real reviewers. Documentation is not enforcement; do not change permissions or invite collaborators without approval. |
 
 Do not mark any story validated by users merely because code tests pass. Keep an experiment's permission status separate from its product priority.
+
+- Test whether a new explorer can find list comparison, time modes and source details in the compact settings without coaching. Confirm contributor discovery remains possible without distracting from exploration. Desktop browser and emulated touch tests are evidence of mechanics, not this comprehension test.

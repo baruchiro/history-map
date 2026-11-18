@@ -23,3 +23,5 @@ Shared-view regression must preserve year, lists, mode, borders, search, map ext
 
 ## Completion
 A passing local test is not a deployed feature. For an authorized release, inspect the actual deployed revision and UI, retest key interactions, and report the real URL, revision, test evidence and limitations. Update status, related story support and backlog only to the extent verified. The product query corpus contains acceptance stories, not an executable natural-language test runner.
+
+Optional settings regression: `python scripts/settings_smoke.py --out /tmp/history-settings` (Playwright Python and Chrome required). Checks setting changes, disclosure reset, labeled switch, time choices, navigation and contributor copy at four sizes. Pair its screenshots with direct pixel inspection; a passing script is not a visual or comprehension review.

@@ -54,7 +54,7 @@ with sync_playwright() as p:
   page.locator('#yearChooser>summary').click();page.locator('#yearInput').fill('1969');page.locator('#goYear').click()
   page.locator('#eventInfo>summary').click();page.locator('#events button').first.click()
   assert page.locator('#detail h2').inner_text()
-  page.locator('#advanced>summary').click();page.locator('#contribute summary').click();assert page.locator('#contributionPrompt').is_visible()
+  page.locator('#advanced>summary').click();page.locator('[data-settings=about]').click();page.locator('#contributorTools>summary').click();page.locator('#contribute summary').click();assert page.locator('#contributionPrompt').is_visible()
   page.locator('#advanced .close-panel').click()
   # Territory tap uses actual hit-testing, then changing time clears stale selection hints.
   box=page.locator('#world').bounding_box()
@@ -62,7 +62,7 @@ with sync_playwright() as p:
   page.wait_for_timeout(100)
   assert 'territory=' in page.url
   if name=='desktop':
-   page.locator('#advanced>summary').click();page.locator('#zoomIn').click();page.locator('#advanced .close-panel').click();mouse_before=page.locator('#world').get_attribute('viewBox');page.locator('#world').scroll_into_view_if_needed();page.mouse.move(cx,cy);page.mouse.down();page.mouse.move(cx+55,cy+15,steps=6);page.mouse.up();page.wait_for_timeout(100)
+   page.locator('#advanced>summary').click();page.locator('[data-settings=display]').click();page.locator('#zoomIn').click();page.locator('#advanced .close-panel').click();mouse_before=page.locator('#world').get_attribute('viewBox');page.locator('#world').scroll_into_view_if_needed();page.mouse.move(cx,cy);page.mouse.down();page.mouse.move(cx+55,cy+15,steps=6);page.mouse.up();page.wait_for_timeout(100)
    assert page.locator('#world').get_attribute('viewBox')!=mouse_before
   page.evaluate('Object.defineProperty(navigator,"share",{value:undefined,configurable:true})');page.locator('#copyView').click();page.locator('#shareDialog').wait_for(state='visible');page.locator('#copyShare').click();page.wait_for_function('document.querySelector("#copyStatus").textContent.length>0');page.locator('#closeShare').click();page.evaluate('Object.defineProperty(navigator,"share",{configurable:true,value:async data=>window.__shared=data})');page.locator('#copyView').click();page.wait_for_function('window.__shared?.url===document.querySelector("#viewLink").href')
   page.locator('#reset').click();pt=page.locator('#world').evaluate('(el)=>{const p=new DOMPoint(20,180).matrixTransform(el.getScreenCTM());return {x:p.x,y:p.y}}');page.touchscreen.tap(pt['x'],pt['y']);assert page.locator('body').evaluate('(el)=>el.classList.contains("quiet-map")');page.touchscreen.tap(pt['x'],pt['y']);assert not page.locator('body').evaluate('(el)=>el.classList.contains("quiet-map")')

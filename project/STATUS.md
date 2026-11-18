@@ -19,3 +19,6 @@ No general natural-language query engine, server, MCP endpoint, authenticated sh
 - [Principles](../principles/product.md) and [AGENTS.md](../AGENTS.md): project working agreements.
 
 The mobile milestone was browser-tested on the deployed site using emulated touch at four viewport sizes, with no JavaScript page errors. This is not yet physical-device testing, a real OS share-sheet test or evidence that new users understand the UI. Native-share data forwarding/cancel/failure are tested with browser API stubs.
+
+### Settings refinement, 2026-11-18
+Settings now open on content controls, with a compact content/display/about switcher. Time modes have visual selected states, boundaries have a labeled switch, and contributor instructions/source detail require secondary reveals. Reopening settings resets disclosure to content, without resetting map or shared URL state. Tested actual controls and rendered pixels at narrow portrait, portrait, desktop and landscape. Physical device and new-user comprehension tests remain outstanding.

@@ -13,3 +13,6 @@ Keep accepted decisions separate from research and implementation details. New e
 | D07 | 2026-11-18 | Accepted process | Accumulate natural-language product query stories over time, preserving provenance and supported/planned distinctions. Hypotheses are not observed demand and stories are not automatically executable tests. |
 
 | D08 | 2026-11-18 | Accepted | Full-viewport map with floating icon controls supersedes the first map-first framed layout. Native share where supported, explicit copy fallback, background-only title toggle and accessible icon labels. Preserve map gestures and exact links. |
+
+## 2026-11-18: Settings are a control surface
+Maintainer feedback: the full-viewport direction works, but settings still contain too much text. Content/display/about now split everyday controls from documentation. Time modes use selected visual choices; the boundary layer uses a labeled switch. Contributor prompts and long methods remain discoverable through secondary reveals, not the explorer's default route. No new data access or product feature is implied.
