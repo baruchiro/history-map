@@ -61,3 +61,9 @@ GitHub Pages serves docs/. After approved list changes, rebuild the tracked cata
 ## Historical territories
 
 An optional year-driven Cliopatria layer covers 3400 BCE to 2024 CE. Boundaries are approximate reconstructions with source date intervals, not annual interpolation. The Persian example opens 500 BCE. See [provenance, limits and reproduction](docs/borders.md). Event lists remain independent of territory data.
+
+## Sharing a view and contributing
+
+The view URL fragment preserves the year, selected lists, range/cumulative mode, historical-territory visibility, map extent, search and selected public item. It contains no personal-library data. Search text is part of the shared link; review it before sharing. Invalid or unknown URL parameters are ignored. The site includes a copyable contribution prompt and links to the contributor skill, schema and sample. Contributions remain subject to review and maintainer catalog publication.
+
+URL-state checks: `node --test tests/view-state.test.cjs`
