@@ -11,3 +11,5 @@ Keep accepted decisions separate from research and implementation details. New e
 | D05 | 2026-11-18 | Direction, unvalidated | Explore commercial value through a concrete problem, potential payer and small demand test. No proven customer, market or business model is claimed. |
 | D06 | 2026-11-18 | Exploration | Let a person's own assistant choose a useful map/comparison/timeline and potentially show an interactive view in chat. Investigate MCP Apps and host support before architecture commitment. No server or connector is authorized by this entry. |
 | D07 | 2026-11-18 | Accepted process | Accumulate natural-language product query stories over time, preserving provenance and supported/planned distinctions. Hypotheses are not observed demand and stories are not automatically executable tests. |
+
+| D08 | 2026-11-18 | Accepted | Full-viewport map with floating icon controls supersedes the first map-first framed layout. Native share where supported, explicit copy fallback, background-only title toggle and accessible icon labels. Preserve map gestures and exact links. |

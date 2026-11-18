@@ -4,7 +4,7 @@ These are candidate outcomes, not automatic authority to spend, contact people, 
 
 | ID | Priority | State | Outcome and acceptance gate |
 |---|---|---|---|
-| UX01 | Now | Implemented; field validation pending | Simple map-first mobile. Browser-emulated pinch/pan/tap and exact share tests pass. Next: physical iOS/Android checks and a few consented first-use sessions, with observed friction and fixes rather than invented results. |
+| UX01 | Now | Implemented; field validation pending | Full-viewport map with floating controls, native-share routing/copy fallback and background title toggle. Browser-emulated pinch/pan/tap and exact share tests pass. Next: physical iOS/Android and real native-share-sheet checks, then a few consented first-use sessions, with observed friction and fixes rather than invented results. |
 | DOC01 | Now | Implemented | Modular AGENTS/principles, project summary, decision log and query corpus. A new contributor can find scope, commands and unresolved choices without private chat history. |
 | BIZ01 | Next | Proposed | Choose one audience/problem/payer hypothesis. Define current workaround, value and a smallest consented demand experiment with a stop criterion. No outreach or paid work until separately authorized. |
 | STORY01 | Next | Proposed | Extend story corpus from voluntarily supplied, publication-approved queries. Preserve natural language and distinguish genuine requests from team-authored hypotheses; attach acceptance cases to implementation PRs. |

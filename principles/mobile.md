@@ -2,8 +2,10 @@
 
 The map is the product's primary surface. The originator's ability to understand it is a baseline, not a substitute for testing with new people.
 
-- Keep first-screen controls minimal: year, sharing, full-world reset and timeline. Tapping the year exposes direct entry.
+- Use the entire viewport for the map. Float a small year control, share/world-reset icons and timeline above it. Icons need accessible labels and 44px or larger targets. Tapping the year exposes direct entry.
 - One finger drags the map; two fingers pinch. A drag must not accidentally select a territory or event.
+- A background map tap may hide/reveal the title and gesture hint. Feature selection, controls and dragging must not accidentally trigger that toggle. Keep navigation recoverable.
+- Sharing opens the native share sheet when supported; otherwise show an explicit copy-link dialog. Canceling native sharing must not automatically send or copy. Never choose a recipient or send automatically.
 - Hide list selection, playback, source settings and contributor tools behind clearly named closed sections. Progressive disclosure is not removal.
 - Do not force landscape or maintain a separate mobile product without evidence. Support narrow portrait, desktop and landscape.
 - The Hebrew timeline runs from early dates on the right to later dates on the left. Labels, fill and playback direction must agree.
