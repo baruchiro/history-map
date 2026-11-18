@@ -9,7 +9,7 @@ function decode(hash,keys=[]){const p=new URLSearchParams(String(hash).replace(/
  if(['range','all'].includes(p.get('mode')))s.range=p.get('mode')==='range';
  if(['0','1'].includes(p.get('borders')))s.borders=p.get('borders')==='1';
  const q=p.get('q');if(q!==null&&q.length<=120)s.search=q;
- const m=(p.get('map')||'').split(',').map(number);if(m.length===4&&m.every(Number.isFinite)&&m[2]>=90&&m[2]<=720&&Math.abs(m[3]*2-m[2])<.001&&m[0]>=0&&m[1]>=0&&m[0]+m[2]<=720.001&&m[1]+m[3]<=360.001)s.map=m;
+ const m=(p.get('map')||'').split(',').map(number);if(m.length===4&&m.every(Number.isFinite)&&m[2]>=90&&m[2]<=720&&m[3]>=45&&m[3]<=360&&m[0]>=0&&m[1]>=0&&m[0]+m[2]<=720.001&&m[1]+m[3]<=360.001)s.map=m;
  const event=p.get('event');if(event&&/^[a-zA-Z0-9_-]{1,160}$/.test(event))s.event=event;
  const territory=number(p.get('territory'));if(Number.isInteger(territory)&&territory>=0&&territory<20000)s.territory=territory;
  return s;}
