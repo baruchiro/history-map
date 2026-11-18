@@ -1,0 +1,44 @@
+# Draft only: bootstrap these trusted scripts on the default branch before use.
+# Configure repository rules/CODEOWNERS separately; this YAML does not enforce them.
+name: Validate event-list contribution
+on:
+  pull_request:
+permissions: {}
+jobs:
+  list-format:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    steps:
+      - name: Read trusted validator from base revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+      - name: Read proposed data, never execute proposed scripts
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: refs/pull/${{ github.event.number }}/head
+          path: proposed
+          fetch-depth: 0
+          sparse-checkout: lists
+          persist-credentials: false
+      - name: Enforce data-only contribution paths
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          python3 - <<'PY'
+          import os, re, subprocess
+          base = os.environ['BASE_SHA']
+          assert re.fullmatch(r'[0-9a-f]{40,64}', base)
+          paths = subprocess.check_output(['git','-C','proposed','diff','--name-only','-z',base,'HEAD']).split(b'\0')
+          assert all(re.fullmatch(rb'lists/[a-z0-9][a-z0-9-]{0,79}\.json',p) for p in paths if p), 'Data PRs may change only lists/*.json'
+          PY
+      - name: Run trusted unit tests and validate proposed JSON
+        run: |
+          python3 -m unittest discover -s trusted/tests -v
+          python3 trusted/scripts/check_contributions.py proposed/lists
+# Deliberately no pull_request_target, secrets, cache, self-hosted runner,
+# installation, artifact execution, automatic merge or deployment.

@@ -1,0 +1,77 @@
+{
+  "lists": [
+    {
+      "key": "science-and-technology",
+      "title": "מדע וטכנולוגיה",
+      "kind": "historical",
+      "events": [
+        {
+          "year": 1455,
+          "date": "סביב 1455",
+          "title": "תנ\"ך גוטנברג יוצא לאור",
+          "place": "מיינץ, גרמניה",
+          "lon": 8.27,
+          "lat": 50,
+          "text": "הדפסת התנ\"ך במיינץ הושלמה כנראה בסוף 1455. זהו ציון דרך בדפוס באותיות מתכת ניידות במערב אירופה, לא ראשית הדפוס בעולם.",
+          "publisher": "Library of Congress",
+          "source": "https://loc.gov/exhibits/bibles/the-gutenberg-bible.html"
+        },
+        {
+          "year": 1609,
+          "date": "קיץ 1609 ואילך",
+          "title": "גלילאו מפנה טלסקופ לשמיים",
+          "place": "צפון איטליה, אזור פעילותו",
+          "lon": 11.88,
+          "lat": 45.41,
+          "text": "גלילאו מתחיל בסדרת תצפיות אסטרונומיות באמצעות טלסקופים מהסוג ששניים מהם נשמרים במוזיאון גלילאו. המיקום הוא אזורי ולא אתר מדידה מדויק.",
+          "publisher": "Museo Galileo",
+          "source": "https://www.museogalileo.it/en/galileo/instruments-en.html"
+        },
+        {
+          "year": 1687,
+          "date": "1687",
+          "title": "הפרינקיפיה של ניוטון מתפרסמת",
+          "place": "לונדון, מקום ההוצאה",
+          "lon": -0.12,
+          "lat": 51.51,
+          "text": "המהדורה הראשונה של Principia מתפרסמת בלונדון. הסמן מציין את מקום ההוצאה לאור, לא את המקום שבו התגבשו כל הרעיונות שבספר.",
+          "publisher": "Royal Society",
+          "source": "https://catalogues.royalsociety.org/CalmView/Record.aspx?id=18577&src=CalmView.CatalogL"
+        },
+        {
+          "year": 1876,
+          "date": "1876",
+          "title": "בל מקבל פטנט על הטלפון",
+          "place": "בוסטון, אזור עבודתו",
+          "lon": -71.06,
+          "lat": 42.36,
+          "text": "אלכסנדר גרהם בל מקבל פטנט על טלגרף חשמלי להעברת דיבור. המפה מסמנת את בוסטון, שבה חי ועבד באותן שנים, ולא את משרד הפטנטים.",
+          "publisher": "National Park Service",
+          "source": "https://www.nps.gov/places/volta-bureau.htm"
+        },
+        {
+          "year": 1928,
+          "date": "1928",
+          "title": "פלמינג מגלה את הפניצילין",
+          "place": "בית החולים סנט מרי, לונדון",
+          "lon": -0.17,
+          "lat": 51.52,
+          "text": "אלכסנדר פלמינג מגלה פניצילין בסנט מרי. הפיתוח לטיפול רפואי שמיש מגיע בהמשך, בעבודתם של חוקרים נוספים; הגילוי והטיפול אינם אותו אירוע.",
+          "publisher": "American Chemical Society",
+          "source": "https://pubs.acs.org/doi/abs/10.1021/cen-v077n051.p048"
+        },
+        {
+          "year": 1957,
+          "date": "4 באוקטובר 1957",
+          "title": "ספוטניק פותח את עידן החלל",
+          "place": "בייקונור, קזחסטן של היום",
+          "lon": 63.34,
+          "lat": 45.92,
+          "text": "ברית המועצות משגרת את הלוויין המלאכותי הראשון למסלול סביב כדור הארץ. הסמן מציין את אתר השיגור הקרקעי, לא את מיקום הלוויין.",
+          "publisher": "NASA",
+          "source": "https://www.nasa.gov/history/65-years-ago-sputnik-ushers-in-the-space-age/"
+        }
+      ]
+    }
+  ]
+}

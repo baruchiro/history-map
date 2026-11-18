@@ -1,0 +1,77 @@
+{
+  "lists": [
+    {
+      "key": "voyages-and-encounters",
+      "title": "מסעות ומפגשים",
+      "kind": "historical",
+      "events": [
+        {
+          "year": 1498,
+          "date": "20 במאי 1498",
+          "title": "דה גאמה מגיע לקליקוט",
+          "place": "קוז׳יקוד, הודו",
+          "lon": 75.78,
+          "lat": 11.26,
+          "text": "המשלחת הפורטוגלית מגיעה להודו לאחר הקפת דרום אפריקה. היא נכנסת לרשת מסחר קיימת, ולא מצליחה להגיע להסכם מסחרי עם השליט המקומי.",
+          "publisher": "Britannica",
+          "source": "https://kids.britannica.com/students/article/Vasco-da-Gama/274480"
+        },
+        {
+          "year": 1522,
+          "date": "ספטמבר 1522",
+          "title": "משלחת מגלן משלימה הקפה",
+          "place": "דרום־מערב ספרד, אזור החזרה",
+          "lon": -6.35,
+          "lat": 36.78,
+          "text": "אחרי מותו של מגלן בפיליפינים, חואן סבסטיאן אלקנו מחזיר את ויקטוריה לספרד. המסע משלים את הקפת העולם הראשונה. הסמן מציין את אזור החזרה, לא את נתיב ההפלגה.",
+          "publisher": "Britannica",
+          "source": "https://kids.britannica.com/scholars/article/Juan-Sebasti%C3%A1n-del-Cano/32242"
+        },
+        {
+          "year": 1769,
+          "date": "8 באוקטובר 1769",
+          "title": "האנדוור פוגשת את המאורים",
+          "place": "טורנגנוי־א־קיווה, ניו זילנד",
+          "lon": 178.02,
+          "lat": -38.67,
+          "text": "קוק ואנשיו יורדים לחוף ליד גיסבורן של היום. המפגשים מלווים באי־הבנות ובמות מאורים. טופאיה, איש הדת מטהיטי, ממלא בהמשך תפקיד מרכזי בתרגום ובתיווך.",
+          "publisher": "NZ History",
+          "source": "https://nzhistory.govt.nz/page/early-meetings-between-peoples"
+        },
+        {
+          "year": 1835,
+          "date": "1835",
+          "title": "דרווין מבקר בגלפגוס",
+          "place": "איי גלפגוס, אקוודור",
+          "lon": -90.5,
+          "lat": -0.6,
+          "text": "דרווין שוהה כחמישה שבועות באיים במהלך מסע הביגל. התצפיות שם יהפכו לחלק מהרקע לעבודתו על האבולוציה. הסמן מייצג את הארכיפלג כולו.",
+          "publisher": "Charles Darwin Foundation",
+          "source": "https://www.darwinfoundation.org/en/visit-galapagos/about-galapagos/"
+        },
+        {
+          "year": 1903,
+          "date": "17 בדצמבר 1903",
+          "title": "הטיסה הממונעת של האחים רייט",
+          "place": "קיל דוויל הילס, ארה\"ב",
+          "lon": -75.67,
+          "lat": 36.01,
+          "text": "אורוויל רייט מטיס את הפלייר במשך 12 שניות למרחק של כ־120 רגל. זהו ציון דרך בטיסה ממונעת ונשלטת של כלי טיס כבד מן האוויר.",
+          "publisher": "National Park Service",
+          "source": "https://www.nps.gov/places/000/first-flight-landing.htm"
+        },
+        {
+          "year": 1969,
+          "date": "16 ביולי 1969",
+          "title": "אפולו 11 יוצאת אל הירח",
+          "place": "מרכז החלל קנדי, ארה\"ב",
+          "lon": -80.6,
+          "lat": 28.61,
+          "text": "סטורן 5 משגר את ארמסטרונג, קולינס ואולדרין ממרכז החלל קנדי. זהו יום השיגור; הנחיתה על הירח היא אירוע מאוחר יותר. הסמן נשאר על כדור הארץ.",
+          "publisher": "NASA",
+          "source": "https://www.nasa.gov/image-article/launch-of-apollo-11/"
+        }
+      ]
+    }
+  ]
+}
