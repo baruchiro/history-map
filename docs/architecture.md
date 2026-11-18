@@ -4,11 +4,11 @@
 
 Agent -> source list JSON -> pull request -> structural check -> human source/content review -> merge -> generated catalog -> frontend reader.
 
-Implemented locally: source contract, map-bundle compiler, catalog builder, data checks, regression tests, contributor guidance and draft PR workflow. Not implemented remotely: any repository, running CI, branch protections, approved contributions, merge or deployment.
+Published: source contract, map-bundle compiler, catalog builder, data checks, 27 regression tests, contributor guidance and a read-only PR workflow. GitHub Pages serves the standalone frontend from master/docs. Contribution CI still needs a first real pull-request test. Required reviews and branch protection are not configured.
 
-The catalog builder emits one entry per list. A frontend adapter can let the user select two entries and render their compiled event arrays without editing events. The existing local personal library is separate and must not be overwritten. IDs are deterministic for stable list/event identity; changed event titles/dates/places generate new IDs. A future update protocol needs explicit event IDs and version history.
+The catalog builder emits one entry per list. The static frontend lets visitors select two catalog entries and render their compiled event arrays without editing events. The existing local personal library is separate and must not be overwritten. IDs are deterministic for stable list/event identity; changed event titles/dates/places generate new IDs. A future update protocol needs explicit event IDs and version history.
 
-No catalog reader has yet been wired into the hosted map, and no claim is made that a PR will appear there automatically. A standalone map repository can include the map source and static compiled catalog. Map publishing/deployment and the user's local library remain separate decisions.
+The standalone site reads docs/site/catalog.json. Approved list changes require a maintainer to rebuild and commit that catalog; unreviewed PR data never appears automatically. The original hosted prototype and its per-viewer personal library remain separate.
 
 ## Stage 2: backend and MCP
 
@@ -26,7 +26,7 @@ It does not establish historical truth, licensing, source authorship, safety of 
 
 ## CI safety rationale
 
-The draft uses pull_request, explicit contents:read, no secrets/caches, no self-hosted runner, no writeback, and a full-SHA-pinned checkout action. The validator runs from the base revision; proposed scripts are not executed by the declared validation steps. Ordinary data PRs may change only lists/*.json. Repository review rules must protect workflow changes, since a PR workflow itself can be modified. The initial bootstrap needs special maintainer review because the base validator does not yet exist in an empty repository.
+The workflow uses pull_request, explicit contents:read, no secrets/caches, no self-hosted runner, no writeback, and a full-SHA-pinned checkout action. The validator runs from the base revision; proposed scripts are not executed by the declared validation steps. Ordinary data PRs may change only lists/*.json. Repository review rules must protect workflow changes, since a PR workflow itself can be modified. The initial bootstrap needs special maintainer review because the base validator does not yet exist in an empty repository.
 
 References inspected 18 November 2026:
 - https://docs.github.com/en/actions/reference/security/secure-use
