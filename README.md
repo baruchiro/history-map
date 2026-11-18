@@ -57,3 +57,7 @@ Sources inspected:
 ## Static site
 
 GitHub Pages serves docs/. After approved list changes, rebuild the tracked catalog with `python3 scripts/check_contributions.py lists --out /tmp/catalog-new.json` and copy that reviewed output to docs/site/catalog.json. Catalog rebuild/publish is deliberately a maintainer step, not automatic acceptance of unreviewed data. Run a local HTTP server at docs/ to preview the frontend. No package install or external map service is used.
+
+## Historical territories
+
+An optional year-driven Cliopatria layer covers 3400 BCE to 2024 CE. Boundaries are approximate reconstructions with source date intervals, not annual interpolation. The Persian example opens 500 BCE. See [provenance, limits and reproduction](docs/borders.md). Event lists remain independent of territory data.
