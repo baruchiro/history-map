@@ -43,7 +43,7 @@ Validation is structural, not factual or a security certification. It does not f
 
 Each compiled list stays within the prototype's current 14,500-byte personal library budget. The repository catalog may contain up to 200 list files; that is not a claim that all files can fit together in the current personal library. The present local-import UI allows imports only into an empty library. It must not be used to overwrite existing work.
 
-The trusted scripts and workflow are published on the default branch. Contribution CI has not yet been exercised on a real pull request. Configure review rules before accepting outside contributions. Choose required checks and required content/code reviews separately. A PR can edit a pull_request workflow; code ownership and branch/ruleset review are required, not supplied by YAML. Keep fork permissions restricted, secrets absent and runners GitHub-hosted. Use standard GitHub-hosted runners for the public repository. No paid runners or services are part of this project.
+The trusted scripts and workflow are published on the default branch. Contribution CI passed its first real data-only smoke-test PR, including the 27 regression tests and catalog validation. Configure review rules before accepting outside contributions. Choose required checks and required content/code reviews separately. A PR can edit a pull_request workflow; code ownership and branch/ruleset review are required, not supplied by YAML. Keep fork permissions restricted, secrets absent and runners GitHub-hosted. Use standard GitHub-hosted runners for the public repository. No paid runners or services are part of this project.
 
 This project has no backend or MCP listener. The existing hosted private map remains separate.
 

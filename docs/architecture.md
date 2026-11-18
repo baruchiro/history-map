@@ -4,7 +4,7 @@
 
 Agent -> source list JSON -> pull request -> structural check -> human source/content review -> merge -> generated catalog -> frontend reader.
 
-Published: source contract, map-bundle compiler, catalog builder, data checks, 27 regression tests, contributor guidance and a read-only PR workflow. GitHub Pages serves the standalone frontend from master/docs. Contribution CI still needs a first real pull-request test. Required reviews and branch protection are not configured.
+Published: source contract, map-bundle compiler, catalog builder, data checks, 27 regression tests, contributor guidance and a read-only PR workflow. GitHub Pages serves the standalone frontend from master/docs. Contribution CI passed its first real data-only smoke-test PR. Required reviews and branch protection are not configured.
 
 The catalog builder emits one entry per list. The static frontend lets visitors select two catalog entries and render their compiled event arrays without editing events. The existing local personal library is separate and must not be overwritten. IDs are deterministic for stable list/event identity; changed event titles/dates/places generate new IDs. A future update protocol needs explicit event IDs and version history.
 
