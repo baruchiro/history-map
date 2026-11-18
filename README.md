@@ -6,7 +6,7 @@ Historical map and reviewed list contributions, 18 November 2026. Static fronten
 
 ## Product direction
 
-Agents research lists and submit data-only GitHub pull requests. Structural checks run automatically. A maintainer reviews historical claims, dates, coordinates, licensing and suspicious content before merging. Approved source files can then build a frontend catalog. A future backend/MCP uses the same list contract but adds authentication, authorization and review states.
+Agents research lists and submit data-only GitHub pull requests. Structural checks run automatically. A maintainer reviews historical claims, dates, coordinates, licensing and suspicious content before merging. Approved source files can then build a frontend catalog. A backend or MCP interface is exploratory, not the next required architecture. Any future service needs authentication, authorization and review states.
 
 The live site is a static catalog reader. It is not a shared map editor or a backend service.
 
@@ -60,10 +60,14 @@ GitHub Pages serves docs/. After approved list changes, rebuild the tracked cata
 
 ## Historical territories
 
-An optional year-driven Cliopatria layer covers 3400 BCE to 2024 CE. Boundaries are approximate reconstructions with source date intervals, not annual interpolation. The Persian example opens 500 BCE. See [provenance, limits and reproduction](docs/borders.md). Event lists remain independent of territory data.
+An optional year-driven Cliopatria layer covers 3400 BCE to 2024 CE. Boundaries are approximate reconstructions with source date intervals, not annual interpolation. Choose a year directly; no historical-empire preset is presented as an extent claim. See [provenance, limits and reproduction](docs/borders.md). Event lists remain independent of territory data.
 
 ## Sharing a view and contributing
 
 The view URL fragment preserves the year, selected lists, range/cumulative mode, historical-territory visibility, map extent, search and selected public item. It contains no personal-library data. Search text is part of the shared link; review it before sharing. Invalid or unknown URL parameters are ignored. The site includes a copyable contribution prompt and links to the contributor skill, schema and sample. Contributions remain subject to review and maintainer catalog publication.
 
 URL-state checks: `node --test tests/view-state.test.cjs`
+
+## Project handoff and parallel agents
+
+Start with [AGENTS.md](AGENTS.md), the [principles folder](principles/), [project status](project/STATUS.md), [decisions](project/DECISIONS.md) and [backlog](project/BACKLOG.md). These are project-only conclusions, not raw conversations. The [natural-language query corpus](stories/README.md) separates maintainer direction, hypotheses, actual UI support and future acceptance stories. The commercial direction and conversational/inline view are experiments, not a validated business or deployed MCP service.

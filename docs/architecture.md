@@ -4,13 +4,13 @@
 
 Agent -> source list JSON -> pull request -> structural check -> human source/content review -> merge -> generated catalog -> frontend reader.
 
-Published: source contract, map-bundle compiler, catalog builder, data checks, 27 regression tests, contributor guidance and a read-only PR workflow. GitHub Pages serves the standalone frontend from master/docs. Contribution CI passed its first real data-only smoke-test PR. Required reviews and branch protection are not configured.
+Published: source contract, map-bundle compiler, catalog builder, data checks, 30 Python regression tests and six URL-state tests, contributor guidance and a read-only PR workflow. GitHub Pages serves the standalone frontend from master/docs. Contribution CI passed its first real data-only smoke-test PR. Required reviews and branch protection are not configured.
 
 The catalog builder emits one entry per list. The static frontend lets visitors select two catalog entries and render their compiled event arrays without editing events. The existing local personal library is separate and must not be overwritten. IDs are deterministic for stable list/event identity; changed event titles/dates/places generate new IDs. A future update protocol needs explicit event IDs and version history.
 
 The standalone site reads docs/site/catalog.json. Approved list changes require a maintainer to rebuild and commit that catalog; unreviewed PR data never appears automatically. The original hosted prototype and its per-viewer personal library remain separate.
 
-## Stage 2: backend and MCP
+## Exploration: backend and MCP, not an approved next stage
 
 Keep the list contract, but add a durable store, review queue and versioned API. Suggested operations are submit-list, validate-list, get-submission-status and read-approved-lists. Submission produces a draft pending review, never an automatically published record. MCP is an interface to these operations, not the authority system itself.
 
@@ -34,3 +34,8 @@ References inspected 18 November 2026:
 - https://github.com/actions/checkout/releases
 
 The checkout pin was resolved directly from the official actions/checkout v7.0.1 tag to 3d3c42e5aac5ba805825da76410c181273ba90b1. This does not replace dependency review or future updates.
+
+
+## Conversational and inline UI exploration
+
+A future assistant could select a map/comparison/timeline using the public data and shared-view contract. MCP Apps is a possible UI interface, conditional on actual host/version capability. Neither this document nor the protocol's existence proves support in a particular assistant. A local reference-host demo is not an in-conversation integration. See [research notes](../project/COLLABORATION-RESEARCH.md) and [query acceptance stories](../stories/README.md). No server, new credentials, paid hosting or connector is implemented or authorized by this design note.

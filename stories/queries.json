@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "description": "Product stories, not an executable natural-language runner or observed-demand dataset.",
+  "queries": [
+    {
+      "id": "Q001",
+      "provenance": "maintainer-direction",
+      "language": "he",
+      "query": "הראי לי את המפה בשנת 500 לפני הספירה.",
+      "intent": "Choose a historical year",
+      "expectedView": "Map with explicit BCE year and approximate source-interval territories",
+      "support": "manual-ui",
+      "automation": "executable-component-tests",
+      "acceptance": [
+        "Exact -500 entry excludes year zero; map remains draggable/pinchable.",
+        "Do not label the result maximum Persia extent or interpolate annual borders.",
+        "Unknown locations and source limitations remain visible."
+      ]
+    },
+    {
+      "id": "Q002",
+      "provenance": "maintainer-direction",
+      "language": "he",
+      "query": "אני רוצה לשתף בדיוק את מה שאני רואה עכשיו.",
+      "intent": "Share the same view",
+      "expectedView": "Stable link to public year, lists, mode, map extent and selection",
+      "support": "manual-ui",
+      "automation": "executable-component-tests",
+      "acceptance": [
+        "Encode/decode preserves exact public view, including portrait aspect ratio and BCE.",
+        "Opening copied link restores view; copy success or fallback is visible.",
+        "Search text is included in the link; no private-library payload is added."
+      ]
+    },
+    {
+      "id": "Q003",
+      "provenance": "maintainer-direction",
+      "language": "he",
+      "query": "הסוכנת שלי תבחר מפה, השוואה או ציר זמן ותציג לי אותם בתוך השיחה.",
+      "intent": "Ask through my own assistant",
+      "expectedView": "Interactive view in a verified supporting chat host, with readable link fallback",
+      "support": "planned",
+      "automation": "acceptance-story-only",
+      "acceptance": [
+        "Test one named host/version rather than infer support from MCP documentation.",
+        "Selection uses sourced public data with explicit uncertainty.",
+        "Unsupported host receives a usable static view/link; no fabricated inline rendering."
+      ]
+    },
+    {
+      "id": "Q004",
+      "provenance": "hypothesis",
+      "language": "he",
+      "query": "אילו אירועי מסעות ומדע התרחשו בערך באותו זמן?",
+      "intent": "Compare two public lists",
+      "expectedView": "Two sourced series on one map with time context",
+      "support": "partial",
+      "automation": "browser-manual",
+      "acceptance": [
+        "Current UI can select two lists and a year window; natural-language interpretation is not built.",
+        "Disclose the actual ±25-year range and that the sample catalog is not complete.",
+        "Identify series and link individual sources."
+      ]
+    },
+    {
+      "id": "Q005",
+      "provenance": "hypothesis",
+      "language": "he",
+      "query": "איפה התרחשו הסיפורים בגיליון הזה?",
+      "intent": "Discover a publication issue geographically",
+      "expectedView": "Authorized issue index with map points linking to original articles",
+      "support": "planned",
+      "automation": "acceptance-story-only",
+      "acceptance": [
+        "No issue content or private reference image is copied without rights.",
+        "Verify source archive navigation and consented issue scope.",
+        "Regional/uncertain locations are labeled; article discovery adds to existing navigation."
+      ]
+    },
+    {
+      "id": "Q006",
+      "provenance": "hypothesis",
+      "language": "he",
+      "query": "השווי בין סיפור מסורתי לבין אירועים היסטוריים באותה תקופה.",
+      "intent": "Compare different claim types",
+      "expectedView": "Clearly separated tradition and historical evidence",
+      "support": "planned",
+      "automation": "acceptance-story-only",
+      "acceptance": [
+        "Do not invent a historical identification or exact date for tradition.",
+        "Show attributed sources, chronology uncertainty and independent claim types.",
+        "If dates cannot be aligned, explain the limit instead of plotting false precision."
+      ]
+    },
+    {
+      "id": "Q007",
+      "provenance": "hypothesis",
+      "language": "he",
+      "query": "הכיני מפה מהפרק הזה בפודקאסט.",
+      "intent": "Create a topic list from audio",
+      "expectedView": "Reviewed draft list with source/time references, not automatic publication",
+      "support": "planned",
+      "automation": "acceptance-story-only",
+      "acceptance": [
+        "Obtain access and rights for the specified source; do not claim ingestion is built.",
+        "Verify factual claims beyond speech transcription and label uncertain places/dates.",
+        "Draft requires content review before entering public catalog."
+      ]
+    },
+    {
+      "id": "Q008",
+      "provenance": "hypothesis",
+      "language": "he",
+      "query": "הדפיסי את התצוגה בלי כל הכפתורים.",
+      "intent": "Export a readable map",
+      "expectedView": "Print/image layout with year, legend, sources and attribution",
+      "support": "planned",
+      "automation": "acceptance-story-only",
+      "acceptance": [
+        "Preserve the chosen view and meaningful labels.",
+        "Check actual print/export pixels and attribution legibility.",
+        "Do not imply export currently exists."
+      ]
+    }
+  ]
+}
