@@ -18,8 +18,13 @@ with sync_playwright() as p:
   page.locator('#search').fill('zzzz-no-match');assert page.locator('#events button').count()==0;page.locator('#search').fill('')
   page.locator('#listChoices input[value=spaceflight-launches-sample]').check();assert 'spaceflight-launches-sample' in page.url
   page.locator('[data-settings=display]').click();assert not page.locator('#search').is_visible()
-  page.locator('[data-range=false]').click();assert not page.locator('#window').is_checked();assert page.locator('[data-range=false]').get_attribute('aria-pressed')=='true'
-  page.locator('[data-range=true]').click();assert page.locator('#window').is_checked()
+  # Nearby-year is the only time mode; no cumulative toggle remains anywhere.
+  assert page.locator('[data-range]').count()==0;assert page.locator('#window').is_checked()
+  # The visible legend decodes each selected list's color/shape, and the creator credit links out.
+  assert page.locator('#legend .legend-item').count()>=2;assert page.locator('.site-credit a').get_attribute('href')=='https://www.baruchiro.com/'
+  legend_color=page.locator('#legend .legend-mark').first.evaluate('(e)=>getComputedStyle(e).backgroundColor')
+  tick_color=page.locator('.event-tick').first.evaluate('(e)=>getComputedStyle(e).backgroundColor')
+  assert legend_color==tick_color,(legend_color,tick_color)
   page.locator('#showBorders').uncheck();page.wait_for_function('document.querySelectorAll("#borders path").length===0')
   page.locator('#showBorders').check();page.wait_for_selector('#borders path');assert not page.locator('#contribute').is_visible()
   page.screenshot(path=str(out/(name+'-display.png')))
