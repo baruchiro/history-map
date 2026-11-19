@@ -39,3 +39,6 @@ The approximate-boundary status is now inside Display settings rather than float
 
 ### Concurrent global opening, 2026-11-19
 Fresh views compare spaceflight1957–1977(16events) with African independence1956–1977(20events) at1962. The legend explicitly distinguishes simultaneity from causation, without asserting absolute historical independence. Both source scopes and capital/launch-site representation caveats are visible. Nine collections total. Identical factual entries selected from multiple lists are merged only when kind/year/date/title/place/coordinates/source/description match exactly; memberships remain attached. Distinct sources or descriptions are not merged.
+
+### Explicit event-time semantics, 2026-11-19
+Fresh views again default to the nearby-year window. A visible timeline control distinguishes the inclusive ±25-year event window from cumulative events up to the selected year. The displayed date span and event-label years make clear that these are point events, not lifetimes or continuous academy activity. Legacy cumulative links retain their mode rather than silently changing their meaning. Regression covers the 1180 Mishneh Torah event being absent at 1922 in nearby-year mode.

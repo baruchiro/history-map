@@ -46,3 +46,6 @@ a:hover{text-decoration:underline}
 #events button.active{box-shadow:inset -3px 0 #A83A29}
 #eventTicks .event-tick{background:#A83A29}
 .event-tick.second{background:#A2977D}
+
+/* Time semantics stay visible, independently of the settings drawer. */
+.visible-time-mode{display:flex;gap:6px;justify-content:center}.visible-time-mode button{flex:1;max-width:240px;min-height:44px;padding:4px 6px;font-size:12px;line-height:1.3}.visible-time-mode button[aria-pressed="true"]{background:#29251E;color:#FAF8F2;border-color:#29251E}#timeMeaning{font-size:11px;line-height:1.5;text-align:center;margin:3px 0 0;color:#6E665A}.map-hint{display:none}#advanced[open],#eventInfo[open]{bottom:205px;max-height:calc(100dvh - 230px)}@media(max-height:500px) and (orientation:landscape){#advanced[open],#eventInfo[open]{bottom:168px;max-height:calc(100dvh - 185px)}.visible-time-mode button{min-height:44px}#timeMeaning{margin:0}.timeline{padding-bottom:2px}}
