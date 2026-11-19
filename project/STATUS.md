@@ -34,3 +34,6 @@ Seven catalog lists now include four new collections: 18 Segula entries, 13 Oral
 
 ### Non-obstructive boundary status, 2026-11-19
 The approximate-boundary status is now inside Display settings rather than floating over the map. It remains live for selected territories. The map itself no longer carries this persistent overlay; source caveats remain accessible.
+
+### Concurrent global opening, 2026-11-19
+Fresh views compare spaceflight1957–1977(16events) with African independence1956–1977(20events) at1962. The legend explicitly distinguishes simultaneity from causation, without asserting absolute historical independence. Both source scopes and capital/launch-site representation caveats are visible. Nine collections total. Identical factual entries selected from multiple lists are merged only when kind/year/date/title/place/coordinates/source/description match exactly; memberships remain attached. Distinct sources or descriptions are not merged.

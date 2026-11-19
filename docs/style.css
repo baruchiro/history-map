@@ -34,3 +34,5 @@ html,body,main{width:100%;height:100%;height:100dvh;overflow:hidden;margin:0;pad
 
 /* Boundary status belongs to settings, never a map-blocking floating badge. */
 #settings-display #selectionHint{position:static;top:auto;left:auto;right:auto;bottom:auto;transform:none;max-width:none;text-align:right;padding:0;margin:0 0 12px;border-radius:0;background:transparent;box-shadow:none;font-size:11px;color:#756c65;pointer-events:auto}
+
+#parallelDemo{font-size:12px;line-height:1.3;text-align:center;margin:3px 0 5px;color:#205f57}#parallelDemo small{font-size:10px;font-weight:normal}
