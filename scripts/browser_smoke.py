@@ -54,7 +54,7 @@ with sync_playwright() as p:
   page.locator('#yearChooser>summary').click();page.locator('#yearInput').fill('1969');page.locator('#goYear').click()
   page.locator('#eventInfo>summary').click();page.locator('#events button').first.click()
   assert page.locator('#detail h2').inner_text()
-  page.locator('#advanced>summary').click();page.locator('[data-settings=about]').click();page.locator('#contributorTools>summary').click();page.locator('#contribute summary').click();assert page.locator('#contributionPrompt').is_visible()
+  page.locator('#eventInfo .close-panel').click();page.locator('#advanced>summary').click();page.locator('[data-settings=about]').click();page.locator('#contributorTools>summary').click();page.locator('#contribute summary').click();assert page.locator('#contributionPrompt').is_visible()
   page.locator('#advanced .close-panel').click()
   # Territory tap uses actual hit-testing, then changing time clears stale selection hints.
   box=page.locator('#world').bounding_box()
