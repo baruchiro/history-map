@@ -26,6 +26,16 @@ def year(value):
     require(type(value) is int and value != 0 and -5000 <= value <= 2100,
             'year: integer -5000..2100, excluding zero')
 
+def span(e):
+    year(e['year'])
+    if 'endYear' not in e:
+        return
+    year(e['endYear'])
+    require(e['endYear'] > e['year'], 'endYear: must be later than year; omit it for a single-year point event')
+
+def year_label(value):
+    return str(value) if value > 0 else str(-value) + ' BCE'
+
 def source(value):
     from urllib.parse import urlsplit
     text(value, 'source', 2000)
@@ -58,12 +68,12 @@ def validate(bundle):
     event_ids = set()
     fields = {'id','year','date','title','place','lat','lon','layer','text','source','publisher'}
     for e in items:
-        require(type(e) is dict and fields <= set(e) <= fields | {'wikipedia'}, 'event: invalid fields')
+        require(type(e) is dict and fields <= set(e) <= fields | {'wikipedia','endYear'}, 'event: invalid fields')
         text(e['id'], 'event id', 200)
         require(e['id'].startswith('custom-') and e['id'] not in event_ids, 'duplicate or invalid event id')
         event_ids.add(e['id'])
         require(e['layer'] in ids, 'event references missing list')
-        year(e['year']); number(e['lat'], 'lat', 90); number(e['lon'], 'lon', 180)
+        year(e['year']); span(e); number(e['lat'], 'lat', 90); number(e['lon'], 'lon', 180)
         for k, limit in [('title',120),('place',120),('date',80),('publisher',120)]:
             text(e[k], k, limit)
         text(e['text'], 'text', 1200, empty='wikipedia' in e)
@@ -89,17 +99,18 @@ def compile_lists(data):
         bundle['collections'].append({'id':layer, 'name':li['title']})
         for raw in li['events']:
             required = {'year','title','place','lat','lon','source','publisher'}
-            require(type(raw) is dict and required <= set(raw) <= required | {'text','date','uncertainty','wikipedia'}, 'source event: invalid fields')
+            require(type(raw) is dict and required <= set(raw) <= required | {'text','date','uncertainty','wikipedia','endYear'}, 'source event: invalid fields')
             e = dict(raw)
             require('text' in e or 'wikipedia' in e, 'text or wikipedia required')
             e.setdefault('text','')
-            year(e['year'])
+            span(e)
             uncertainty = text(e.pop('uncertainty', ''), 'uncertainty', 1000, empty=True)
             note = {'historical':'','tradition':'Attributed tradition, not independent historical verification. ',
                     'fiction':'Fictional chronology, not historical fact. '}[li['kind']]
             e['text'] = note + text(e['text'], 'text', 1200, empty='wikipedia' in e) + ('\nUncertainty: ' + uncertainty if uncertainty else '')
-            e['date'] = e.get('date', str(e['year']) if e['year'] > 0 else str(-e['year']) + ' BCE')
-            e['id'] = 'custom-' + digest(key + '\0' + str(e['year']) + '\0' + str(e['title']) + '\0' + str(e['place']))
+            e['date'] = e.get('date', year_label(e['year']) + ('\u2013' + year_label(e['endYear']) if 'endYear' in e else ''))
+            span_key = '\0' + str(e['endYear']) if 'endYear' in e else ''
+            e['id'] = 'custom-' + digest(key + '\0' + str(e['year']) + span_key + '\0' + str(e['title']) + '\0' + str(e['place']))
             e['layer'] = layer
             bundle['items'].append(e)
     bundle['items'].sort(key=lambda e:(e['year'],e['id']))

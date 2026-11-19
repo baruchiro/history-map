@@ -63,6 +63,15 @@
                     "const": 0
                   }
                 },
+                "endYear": {
+                  "type": "integer",
+                  "minimum": -5000,
+                  "maximum": 2100,
+                  "not": {
+                    "const": 0
+                  },
+                  "description": "Optional last year of a span record. Must be later than year. Omit for a single-year point event. The compiler enforces endYear > year."
+                },
                 "title": {
                   "type": "string",
                   "minLength": 1,

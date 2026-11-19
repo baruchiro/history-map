@@ -59,5 +59,33 @@ class ListsTests(unittest.TestCase):
         self.data['lists'].append(other)
         b=compile_lists(self.data); self.assertEqual(len(b['collections']),2)
         self.assertNotEqual(b['items'][0]['id'], b['items'][1]['id'])
+    def test_end_year_roundtrips(self):
+        self.event()['endYear']=2024
+        b=compile_lists(self.data)
+        self.assertEqual(b['items'][0]['endYear'], 2024)
+        self.assertEqual(validate(json.loads(encoded(b))), b)
+    def test_end_year_default_date_labels_span(self):
+        self.event()['endYear']=2024; self.event().pop('date', None)
+        self.assertEqual(compile_lists(self.data)['items'][0]['date'], '1969\u20132024')
+    def test_end_year_bce_default_date(self):
+        self.event()['year']=-500; self.event()['endYear']=-400; self.event().pop('date', None)
+        self.assertEqual(compile_lists(self.data)['items'][0]['date'], '500 BCE\u2013400 BCE')
+    def test_end_year_must_follow_year(self):
+        self.event()['endYear']=1900; self.bad()
+    def test_end_year_equal_rejected(self):
+        self.event()['endYear']=self.event()['year']; self.bad()
+    def test_end_year_zero_rejected(self):
+        self.event()['endYear']=0; self.bad()
+    def test_end_year_fractional_rejected(self):
+        self.event()['endYear']=1033.5; self.bad()
+    def test_point_event_ids_unchanged_by_span_support(self):
+        base=compile_lists(copy.deepcopy(self.data))
+        again=compile_lists(copy.deepcopy(self.data))
+        self.assertEqual(base['items'][0]['id'], again['items'][0]['id'])
+        self.assertNotIn('endYear', base['items'][0])
+    def test_span_changes_event_identity(self):
+        base=compile_lists(copy.deepcopy(self.data))['items'][0]['id']
+        self.event()['endYear']=2024
+        self.assertNotEqual(base, compile_lists(self.data)['items'][0]['id'])
 
 if __name__=='__main__': unittest.main()

@@ -20,7 +20,7 @@ No MCP protocol-version or transport claim is made in this scaffold. Select and 
 
 ## Validation boundaries
 
-The current compiler checks integer years (-5000..2100 excluding zero), geographic coordinate bounds, HTTPS source URL shape without credentials, string limits, list membership, duplicate identifiers, and final compact UTF-8 byte size. The contribution checker additionally enforces one list per regular slug-named JSON file, matching keys, duplicate JSON-key rejection, no symlinks/subdirectories, 64 KiB source files and a 200-file catalog limit.
+The current compiler checks integer years (-5000..2100 excluding zero), an optional later endYear for sourced span records, geographic coordinate bounds, HTTPS source URL shape without credentials, string limits, list membership, duplicate identifiers, and final compact UTF-8 byte size. The contribution checker additionally enforces one list per regular slug-named JSON file, matching keys, duplicate JSON-key rejection, no symlinks/subdirectories, 64 KiB source files and a 200-file catalog limit.
 
 It does not establish historical truth, licensing, source authorship, safety of linked pages, complete absence of malicious prose, or correct cross-calendar mapping. Those need evidence and review. It never fetches links or executes contributed content.
 

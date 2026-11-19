@@ -151,6 +151,24 @@
         "Three or more lists and explicit empty selection survive shared-view reload; old pair URLs remain valid.",
         "No hard-coded two-list cap; synthetic scale tests are not evidence of an infinite production catalog."
       ]
+    },
+    {
+      "id": "Q011",
+      "provenance": "maintainer-direction",
+      "language": "he",
+      "query": "תמכו גם בטווח של שנים ולא רק בשנה אחת, כדי שאימפריה או ישיבה שקיימה מאות שנים תישאר על המפה לאורך כל התקופה.",
+      "intent": "Keep long-lived entities visible across their full active span",
+      "expectedView": "A span record is visible at every selected year inside its range; single-year point events keep their existing behavior",
+      "support": "manual-ui",
+      "automation": "executable-component-tests",
+      "acceptance": [
+        "A record carries one year, or a start year plus a later end year; year zero stays impossible and the end must follow the start.",
+        "In nearby-year mode a span shows at every year inside its range; a point event still appears only within the ±25-year window.",
+        "In cumulative mode a span appears from its start year onward, matching point events.",
+        "Existing point-event records, IDs and shared links are unchanged; only records edited with sourced span years change identity.",
+        "Span boundary years come from opened sources; approximate ends stay labeled approximate in the event details.",
+        "Fades, growing symbols and per-entity styling remain deferred ideas, not part of this change."
+      ]
     }
   ]
 }
