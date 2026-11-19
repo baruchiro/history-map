@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import math
+import re
 from pathlib import Path
 
 LIMIT = 14500
@@ -32,6 +33,12 @@ def source(value):
     require(u.scheme == 'https' and bool(u.hostname) and not u.username and not u.password,
             'source: expected HTTPS URL without credentials')
 
+def wikipedia(value):
+    require(type(value) is dict and set(value)=={'language','pageId'}, 'wikipedia: expected language/pageId')
+    require(isinstance(value['language'],str) and re.fullmatch(r'[a-z]{2,3}',value['language']), 'wikipedia: invalid language')
+    require(type(value['pageId']) is int and value['pageId']>0, 'wikipedia: invalid pageId')
+    return value
+
 def encoded(bundle):
     # Non-ASCII is kept as UTF-8, matching JSON.stringify byte accounting in the app.
     return json.dumps(bundle, ensure_ascii=False, separators=(',', ':'), allow_nan=False)
@@ -51,7 +58,7 @@ def validate(bundle):
     event_ids = set()
     fields = {'id','year','date','title','place','lat','lon','layer','text','source','publisher'}
     for e in items:
-        require(type(e) is dict and set(e) == fields, 'event: invalid fields')
+        require(type(e) is dict and fields <= set(e) <= fields | {'wikipedia'}, 'event: invalid fields')
         text(e['id'], 'event id', 200)
         require(e['id'].startswith('custom-') and e['id'] not in event_ids, 'duplicate or invalid event id')
         event_ids.add(e['id'])
@@ -59,8 +66,9 @@ def validate(bundle):
         year(e['year']); number(e['lat'], 'lat', 90); number(e['lon'], 'lon', 180)
         for k, limit in [('title',120),('place',120),('date',80),('publisher',120)]:
             text(e[k], k, limit)
-        text(e['text'], 'text', 1200)
+        text(e['text'], 'text', 1200, empty='wikipedia' in e)
         source(e['source'])
+        if 'wikipedia' in e: wikipedia(e['wikipedia'])
     require(len(encoded(bundle).encode('utf-8')) <= LIMIT, 'bundle exceeds 14500-byte map storage limit')
     return bundle
 
@@ -80,14 +88,16 @@ def compile_lists(data):
         layer = 'list-' + digest(key)
         bundle['collections'].append({'id':layer, 'name':li['title']})
         for raw in li['events']:
-            required = {'year','title','place','lat','lon','text','source','publisher'}
-            require(type(raw) is dict and required <= set(raw) <= required | {'date','uncertainty'}, 'source event: invalid fields')
+            required = {'year','title','place','lat','lon','source','publisher'}
+            require(type(raw) is dict and required <= set(raw) <= required | {'text','date','uncertainty','wikipedia'}, 'source event: invalid fields')
             e = dict(raw)
+            require('text' in e or 'wikipedia' in e, 'text or wikipedia required')
+            e.setdefault('text','')
             year(e['year'])
             uncertainty = text(e.pop('uncertainty', ''), 'uncertainty', 1000, empty=True)
             note = {'historical':'','tradition':'Attributed tradition, not independent historical verification. ',
                     'fiction':'Fictional chronology, not historical fact. '}[li['kind']]
-            e['text'] = note + text(e['text'], 'text', 1200) + ('\nUncertainty: ' + uncertainty if uncertainty else '')
+            e['text'] = note + text(e['text'], 'text', 1200, empty='wikipedia' in e) + ('\nUncertainty: ' + uncertainty if uncertainty else '')
             e['date'] = e.get('date', str(e['year']) if e['year'] > 0 else str(-e['year']) + ' BCE')
             e['id'] = 'custom-' + digest(key + '\0' + str(e['year']) + '\0' + str(e['title']) + '\0' + str(e['place']))
             e['layer'] = layer

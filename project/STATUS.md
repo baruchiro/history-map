@@ -42,3 +42,6 @@ Fresh views compare spaceflight1957–1977(16events) with African independence19
 
 ### Explicit event-time semantics, 2026-11-19
 Fresh views again default to the nearby-year window. A visible timeline control distinguishes the inclusive ±25-year event window from cumulative events up to the selected year. The displayed date span and event-label years make clear that these are point events, not lifetimes or continuous academy activity. Legacy cumulative links retain their mode rather than silently changing their meaning. Regression covers the 1180 Mishneh Torah event being absent at 1922 in nearby-year mode.
+
+### Cached Wikipedia background, 2026-11-19
+Optional explicit language/page-ID references can replace independently authored general descriptions. A small same-origin snapshot cache supplies attributed introductory background separately from reviewed event dates/places and caveats. One Hebrew Maimonides sample is included, with revision/retrieval/license metadata and a missing-cache fallback. No visitor Wikimedia request, auto-refresh, bulk migration or lifespan display is added. Source-date disagreements remain qualified rather than silently reconciled.

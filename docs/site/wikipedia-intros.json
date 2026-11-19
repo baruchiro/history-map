@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "snapshots": {
+    "he:647251": {
+      "language": "he",
+      "pageId": 647251,
+      "title": "רמב\"ם",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A8%D7%9E%D7%91%22%D7%9D",
+      "revisionId": 44154142,
+      "retrievedAt": "2026-11-19T16:58:39.396868+00:00",
+      "excerpt": "רבי משה בן מימון (ד'תתצ\"ח, 1138 – כ' בטבת ד'תתקס\"ה, 13 בדצמבר 1204), המכונה בדרך כלל בראשי תיבות רמב\"ם או הרמב\"ם ומוכר בערבית כמוסא בן מימון (موسى بن ميمون) ובלשונות אירופה כמיימונידֶס (Maimonides) היה רב ספרדי ופילוסוף, מגדולי הפוסקים בכל הדורות, מחשובי הפילוסופים בעולם בימי הביניים, איש אשכולות ורופא.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    }
+  }
+}

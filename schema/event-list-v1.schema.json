@@ -51,7 +51,6 @@
                 "place",
                 "lat",
                 "lon",
-                "text",
                 "source",
                 "publisher"
               ],
@@ -107,8 +106,38 @@
                 "uncertainty": {
                   "type": "string",
                   "maxLength": 1000
+                },
+                "wikipedia": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "language",
+                    "pageId"
+                  ],
+                  "properties": {
+                    "language": {
+                      "type": "string",
+                      "pattern": "^[a-z]{2,3}$"
+                    },
+                    "pageId": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  }
                 }
-              }
+              },
+              "anyOf": [
+                {
+                  "required": [
+                    "text"
+                  ]
+                },
+                {
+                  "required": [
+                    "wikipedia"
+                  ]
+                }
+              ]
             }
           }
         }
