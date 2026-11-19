@@ -19,3 +19,6 @@ These are candidate outcomes, not automatic authority to spend, contact people, 
 Do not mark any story validated by users merely because code tests pass. Keep an experiment's permission status separate from its product priority.
 
 - Test whether a new explorer can find list comparison, time modes and source details in the compact settings without coaching. Confirm contributor discovery remains possible without distracting from exploration. Desktop browser and emulated touch tests are evidence of mechanics, not this comprehension test.
+
+- Observe new users interpreting exact event ticks and grouped counts on the full historical scale. Review whether dense recent events need a later focus-range interaction, not an invented nonlinear timeline.
+- Test collision labels and collection search on physical phones and a genuinely large reviewed catalog. Synthetic8-list and dense30-event checks establish bounded mechanics, not production-scale performance or comprehension.

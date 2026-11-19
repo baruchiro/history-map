@@ -16,3 +16,7 @@ Keep accepted decisions separate from research and implementation details. New e
 
 ## 2026-11-18: Settings are a control surface
 Maintainer feedback: the full-viewport direction works, but settings still contain too much text. Content/display/about now split everyday controls from documentation. Time modes use selected visual choices; the boundary layer uses a labeled switch. Contributor prompts and long methods remain discoverable through secondary reveals, not the explorer's default route. No new data access or product feature is implied.
+
+## 2026-11-19: Event cues and searchable collections
+Maintainer asked for event-position marks instead of blind scrubbing, short event labels without overcrowding, and a searchable checkbox collection instead of two fixed lists. Timeline marks use selected-list/search results across the full scale, independent of the current25-year window. Closely packed hit areas group into an event chooser. Picking a cue jumps to that event/year, panning only if needed. Map labels prioritize the active event, try collision-free positions and omit excess titles; markers and full accessible event details remain.
+Collection rows show name and min/max event years. Search matches list names or contained event titles/places/years. Selection is unlimited by UI count, not a promise of tested infinite catalog performance. Shared-state v1 adds optional catalog-validated lists; old a/b pairs remain readable. Explicit empty selection survives reload. No private-library loading or upload is introduced.

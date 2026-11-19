@@ -57,7 +57,7 @@
       "support": "partial",
       "automation": "browser-manual",
       "acceptance": [
-        "Current UI can select two lists and a year window; natural-language interpretation is not built.",
+        "Current UI can select two or more catalog lists and a year window; natural-language interpretation is not built.",
         "Disclose the actual ±25-year range and that the sample catalog is not complete.",
         "Identify series and link individual sources."
       ]
@@ -120,6 +120,36 @@
         "Preserve the chosen view and meaningful labels.",
         "Check actual print/export pixels and attribution legibility.",
         "Do not imply export currently exists."
+      ]
+    },
+    {
+      "id": "Q009",
+      "provenance": "maintainer-direction",
+      "language": "he",
+      "query": "איפה יש אירועים בציר הזמן, ומה האירוע שמופיע במפה?",
+      "intent": "Orient while scrubbing",
+      "expectedView": "Exact event marks and short non-overlapping map titles",
+      "support": "manual-ui",
+      "automation": "browser-manual",
+      "acceptance": [
+        "Marks reflect selected lists and search, not only the current year window.",
+        "Dense hit regions open explicit event choices; title omission does not remove markers or full accessible details.",
+        "Mobile and desktop titles fit their backgrounds and avoid other labels and controls."
+      ]
+    },
+    {
+      "id": "Q010",
+      "provenance": "maintainer-direction",
+      "language": "he",
+      "query": "מצאי רשימות לפי שם או אירוע ובחרי יותר משתיים.",
+      "intent": "Find and compare many collections",
+      "expectedView": "Searchable checkbox collection with title and year span",
+      "support": "manual-ui",
+      "automation": "executable-component-tests",
+      "acceptance": [
+        "Search finds list titles and contained events; collection rows expose real date ranges.",
+        "Three or more lists and explicit empty selection survive shared-view reload; old pair URLs remain valid.",
+        "No hard-coded two-list cap; synthetic scale tests are not evidence of an infinite production catalog."
       ]
     }
   ]

@@ -16,7 +16,7 @@ with sync_playwright() as p:
   assert page.locator('#settings-content').is_visible();assert not page.locator('#contribute').is_visible();assert not page.locator('#sourceNotes').is_visible()
   page.screenshot(path=str(out/(name+'-content.png')))
   page.locator('#search').fill('zzzz-no-match');assert page.locator('#events button').count()==0;page.locator('#search').fill('')
-  page.locator('#a').select_option('spaceflight-launches-sample');assert 'spaceflight-launches-sample' in page.url
+  page.locator('#listChoices input[value=spaceflight-launches-sample]').check();assert 'spaceflight-launches-sample' in page.url
   page.locator('[data-settings=display]').click();assert not page.locator('#search').is_visible()
   page.locator('[data-range=false]').click();assert not page.locator('#window').is_checked();assert page.locator('[data-range=false]').get_attribute('aria-pressed')=='true'
   page.locator('[data-range=true]').click();assert page.locator('#window').is_checked()

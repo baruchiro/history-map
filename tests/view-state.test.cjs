@@ -8,3 +8,11 @@ test('requires known version and bounds query length',()=>{assert.deepEqual(v.de
 test('round-trip BCE endpoints and exact map zoom',()=>{for(const y of [-3400,-1,1,2024]){const s={year:y,a:keys[0],b:keys[1],range:false,borders:false,search:'',map:[12.345678,123.456789,90,45],event:''};const d=v.decode(v.encode(s),keys);assert.equal(d.year,y);assert.deepEqual(d.map,s.map);}});
 
 test('portrait touch viewport safely round-trips without imposing desktop aspect ratio',()=>{const state={year:1969,a:'one',b:'two',range:true,borders:true,map:[115.45,0,229.09,360]};const copy=v.decode(v.encode(state),['one','two']);assert.deepEqual(copy.map,state.map);for(const map of ['0,0,720,361','0,0,89,100','-1,0,90,45','700,0,90,45','0,350,90,45','0,0,Infinity,180'])assert.equal(v.decode('#v=1&map='+map).map,undefined);});
+
+test('many selected lists, empty selection and legacy pair are distinct',()=>{
+ const names=Array.from({length:50},(_,i)=>'list-'+i),base={year:1969,range:true,borders:true,map:[0,0,720,360],a:names[0],b:names[1]};
+ assert.deepEqual(v.decode(v.encode({...base,lists:names}),names).lists,names);
+ assert.deepEqual(v.decode(v.encode({...base,lists:[]}),names).lists,[]);
+ const legacy=v.decode('#v=1&a=list-0&b=list-1',names);assert.equal(legacy.lists,undefined);assert.equal(legacy.a,'list-0');
+ assert.deepEqual(v.decode('#v=1&lists=list-0,list-0,https://bad.invalid,unknown',names).lists,['list-0']);
+});

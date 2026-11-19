@@ -22,3 +22,6 @@ The mobile milestone was browser-tested on the deployed site using emulated touc
 
 ### Settings refinement, 2026-11-18
 Settings now open on content controls, with a compact content/display/about switcher. Time modes have visual selected states, boundaries have a labeled switch, and contributor instructions/source detail require secondary reveals. Reopening settings resets disclosure to content, without resetting map or shared URL state. Tested actual controls and rendered pixels at narrow portrait, portrait, desktop and landscape. Physical device and new-user comprehension tests remain outstanding.
+
+### Event orientation and collections, 2026-11-19
+Timeline now shows event-position ticks with grouped hit targets, an event chooser for dense intervals, and direct year/event jumps. Visible map events receive short clickable titles with measured collision avoidance and a six-title ceiling. Collection selection is searchable checkboxes with year spans; no fixed two-list limit. Shared views preserve many-list/empty selections and still read legacy pairs. Public catalog still has three reviewed lists;8-list UI behavior is tested using synthetic local/browser-only entries, not eight real published sources.
