@@ -7,6 +7,7 @@ with sync_playwright() as p:
  b=p.chromium.launch(executable_path=os.environ.get('CHROME_BIN','/usr/bin/google-chrome'),headless=True,args=['--no-sandbox'])
  for name,w,h in [('mobile',390,844),('narrow',320,720),('desktop',1280,850),('landscape',844,390)]:
   page=b.new_page(viewport={'width':w,'height':h},has_touch=True);errors=[];page.on('pageerror',lambda e:errors.append(str(e)));page.goto(base);page.wait_for_selector('#borders path');page.wait_for_timeout(100)
+  assert page.locator('#time').get_attribute('min')=='1455';assert page.locator('#time').get_attribute('max')=='1969'
   print(name,'labels',page.locator('[data-event-label]').count());assert page.locator('[data-event-label]').count()>0
 
   page.screenshot(path=str(out/(name+'.png')))
@@ -45,6 +46,15 @@ with sync_playwright() as p:
   boxes=[x.bounding_box() for x in page.locator('[data-event-label] rect').all()]
   for i,a in enumerate(boxes):
    for z in boxes[i+1:]:assert not(a['x']<z['x']+z['width'] and a['x']+a['width']>z['x'] and a['y']<z['y']+z['height'] and a['y']+a['height']>z['y'])
+  # Explicit external dates survive; a later collection choice refits deliberately.
+  page.evaluate('jumpYear(-500)');assert page.locator('#time').get_attribute('min')=='-500';assert page.locator('#year').inner_text()=='500 לפנה״ס'
+  page.reload();page.wait_for_selector('#borders path');assert page.locator('#year').inner_text()=='500 לפנה״ס'
+  page.locator('#advanced>summary').click()
+  for row in page.locator('#listChoices input').all():row.uncheck()
+  assert page.locator('#time').is_disabled()
+  page.locator('#listChoices input[value=spaceflight-launches-sample]').check()
+  assert page.locator('#year').inner_text()=='1969';assert page.locator('#time').get_attribute('min')=='1968';assert page.locator('#time').get_attribute('max')=='1970'
+  page.locator('#search').fill('no-match');assert page.locator('#time').is_disabled();page.locator('#search').fill('');assert page.locator('#time').is_enabled()
   assert not errors,errors;page.close()
  b.close()
 server.shutdown()

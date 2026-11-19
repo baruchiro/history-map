@@ -22,3 +22,5 @@ Do not mark any story validated by users merely because code tests pass. Keep an
 
 - Observe new users interpreting exact event ticks and grouped counts on the full historical scale. Review whether dense recent events need a later focus-range interaction, not an invented nonlinear timeline.
 - Test collision labels and collection search on physical phones and a genuinely large reviewed catalog. Synthetic8-list and dense30-event checks establish bounded mechanics, not production-scale performance or comprehension.
+
+- Observe discoverability with the event-fitted timeline. Default full-millennia crowding is fixed; any future time-range zoom must follow actual need rather than compensate for empty default dates.

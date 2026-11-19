@@ -19,3 +19,5 @@ Current first screen opens at 1969 with a visible public event marker on narrow 
 - Show event positions along the same chronological scale as the slider, including selected-list events outside the current time window. Merge near-identical visual ticks and group overlapping hit areas; a group exposes an explicit event choice, never an unexplained random jump.
 - Give visible events short map titles where screen space permits. Prioritize the active event, measure text bounds, avoid other titles, markers and controls, cap visible title count and preserve full names in accessible event details. Omission under crowding is preferable to covering the map.
 - Use searchable checkboxes for collections, not fixed list A/B slots. Search list titles and their event contents; show each collection's actual year span. Permit any number of catalog collections and an explicit empty selection.
+
+- Fit the timeline to selected/search-matching event dates rather than empty millennia. Explicit manual/shared years outside that span must remain visible and unchanged; the derived axis can include that year. Empty and single-year sets must remain finite and usable.
