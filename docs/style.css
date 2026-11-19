@@ -31,3 +31,6 @@ html,body,main{width:100%;height:100%;height:100dvh;overflow:hidden;margin:0;pad
 .event-label{cursor:pointer}.event-label:focus{outline:none}.event-label:focus rect{stroke:#205f57;stroke-width:2px}
 
 .collection-choice{display:flex;align-items:center;gap:10px;min-height:72px;padding:10px 4px;border-bottom:1px solid #e2dcd2;cursor:pointer}.collection-choice input{width:20px;height:20px;flex-shrink:0;accent-color:#29796e}.collection-choice i{width:8px;height:8px;border-radius:50%;flex-shrink:0}.collection-name{min-width:0}.collection-name strong{display:block;font-size:14px;font-weight:500}.collection-name small{display:block;font-size:11px;font-weight:400;color:#756c65}#listChoiceStatus{font-size:11px;color:#756c65;margin:12px 0 0}.pin .mark,.pin.active .mark,.pin:focus .mark{fill:var(--list-color,#29796e)}
+
+/* Boundary status belongs to settings, never a map-blocking floating badge. */
+#settings-display #selectionHint{position:static;top:auto;left:auto;right:auto;bottom:auto;transform:none;max-width:none;text-align:right;padding:0;margin:0 0 12px;border-radius:0;background:transparent;box-shadow:none;font-size:11px;color:#756c65;pointer-events:auto}

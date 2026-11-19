@@ -31,3 +31,6 @@ Default axis now spans1455–1969for the selected sample lists, not3400BCE–202
 
 ### Source-backed collections, 2026-11-19
 Seven catalog lists now include four new collections: 18 Segula entries, 13 Oral Torah entries, and two connected 12-entry kingdoms/Second Temple routes. These are 55 entries with 48 distinct event titles, not a complete archive. The Hebrew collections page records sources, selection bias, approximate point/year representation and chronological disputes. The high-school connection refers only to selected state-sector Second Temple topics. Fresh visits show Segula and Oral Torah at 1488; existing shared views retain their state.
+
+### Non-obstructive boundary status, 2026-11-19
+The approximate-boundary status is now inside Display settings rather than floating over the map. It remains live for selected territories. The map itself no longer carries this persistent overlay; source caveats remain accessible.
