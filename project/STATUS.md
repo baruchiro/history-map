@@ -28,3 +28,6 @@ Timeline now shows event-position ticks with grouped hit targets, an event choos
 
 ### Relevant timeline extent, 2026-11-19
 Default axis now spans1455–1969for the selected sample lists, not3400BCE–2024. Collection/search changes refit the axis; manual/shared outside years remain exact. This supersedes treating modern-end crowding as unavoidable.
+
+### Source-backed collections, 2026-11-19
+Seven catalog lists now include four new collections: 18 Segula entries, 13 Oral Torah entries, and two connected 12-entry kingdoms/Second Temple routes. These are 55 entries with 48 distinct event titles, not a complete archive. The Hebrew collections page records sources, selection bias, approximate point/year representation and chronological disputes. The high-school connection refers only to selected state-sector Second Temple topics. Fresh visits show Segula and Oral Torah at 1488; existing shared views retain their state.
