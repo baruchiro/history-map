@@ -100,21 +100,28 @@ function renderTimelineTicks(events){
 }
 function renderMapLabels(events,active){
  const old=$('mapLabels');if(old)old.remove();const labels=svgEl('g',{id:'mapLabels'});$('pins').append(labels);
+ const leaders=svgEl('g',{'aria-hidden':'true'});labels.append(leaders);
  const svg=$('world'),v=svg.viewBox.baseVal,box=svg.getBoundingClientRect(),scale=Math.min(box.width/v.width,box.height/v.height),ox=box.left+(box.width-v.width*scale)/2-v.x*scale,oy=box.top+(box.height-v.height*scale)/2-v.y*scale;
  const occupied=[...document.querySelectorAll('.basic-bar>button,#yearChooser,header,.timeline,#selectionHint,#advanced,#eventInfo')].filter(el=>el.getClientRects().length).map(el=>{const b=el.getBoundingClientRect();return{x:b.x-5,y:b.y-5,w:b.width+10,h:b.height+10};});
  const overlap=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
- const sorted=[...events].sort((a,b)=>(b.id===active?.id)-(a.id===active?.id)||Math.abs(a.year-year)-Math.abs(b.year-year));
+ const ranked=[...events].sort((a,b)=>(b.id===active?.id)-(a.id===active?.id)||Math.abs(a.year-year)-Math.abs(b.year-year));
+ // Round-robin the visible stories before spending the limited label budget.
+ // A busy recent history must not crowd out the other selected history.
+ const groups=[...new Set(ranked.map(e=>e.listKey))].map(key=>ranked.filter(e=>e.listKey===key)),sorted=[];
+ while(groups.some(g=>g.length))for(const g of groups)if(g.length)sorted.push(g.shift());
  // Reserve pin centers as well, so a title cannot hide another event.
  const pins=events.map(e=>({x:ox+(e.lon+180)*2*scale-9,y:oy+(90-e.lat)*2*scale-9,w:18,h:18}));occupied.push(...pins);
  let shown=0;
  for(const e of sorted){if(shown>=6)break;const px=ox+(e.lon+180)*2*scale,py=oy+(90-e.lat)*2*scale;if(px<0||py<0||px>innerWidth||py>innerHeight)continue;
- const full=e.title,short=full.length>32?full.slice(0,30)+'…':full;
+ const full=e.title,limit=innerWidth<600?23:32,short=full.length>limit?full.slice(0,limit-2)+'…':full;
  const t=svgEl('text',{'font-size':12/scale,'font-family':'Arial,sans-serif',direction:'rtl','text-anchor':'start'});t.textContent=short;labels.append(t);const tw=t.getComputedTextLength()*scale+16,th=27;
- const tries=[{x:px+13,y:py-th/2},{x:px-13-tw,y:py-th/2},{x:px-tw/2,y:py-15-th},{x:px-tw/2,y:py+15},{x:px+13,y:py+22},{x:px-tw/2,y:py+32}];
+ const tries=[{x:px+13,y:py-th/2},{x:px-13-tw,y:py-th/2},{x:px-tw/2,y:py-15-th},{x:px-tw/2,y:py+15},{x:px+13,y:py+22},{x:px-tw/2,y:py+32},{x:px-tw/2,y:py-60-th},{x:px-tw/2,y:py+60},{x:Math.min(innerWidth-8-tw,Math.max(8,px-tw/2)),y:py-60-th}];
  // width and height belong to each candidate, not to the SVG coordinate system.
  t.remove();
  const slot=tries.map(b=>({...b,w:tw,h:th})).find(b=>b.x>=8&&b.y>=8&&b.x+b.w<=innerWidth-8&&b.y+b.h<=innerHeight-8&&!occupied.some(a=>overlap(a,b)));
  if(!slot)continue;occupied.push(slot);shown++;
+ const lx=Math.max(slot.x,Math.min(px,slot.x+tw)),ly=Math.max(slot.y,Math.min(py,slot.y+th));
+ if(Math.hypot(lx-px,ly-py)>20)leaders.append(svgEl('line',{x1:(px-ox)/scale,y1:(py-oy)/scale,x2:(lx-ox)/scale,y2:(ly-oy)/scale,stroke:e.color||'#547c76','stroke-width':1/scale,'stroke-opacity':.65,'pointer-events':'none'}));
  const g=svgEl('g',{'data-event-label':e.id,role:'button',tabindex:0,'aria-label':formatYear(e.year)+': '+full,class:'event-label'});const choose=()=>{if(mapMoved)return;selected=e.id;stop();render();$('eventInfo').open=true;};g.onclick=choose;g.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();choose();}};const bg=svgEl('rect',{x:(slot.x-ox)/scale,y:(slot.y-oy)/scale,width:tw/scale,height:th/scale,rx:8/scale,fill:e.id===active?.id?'#eaf4ef':'#fffefa','fill-opacity':.97,stroke:e.id===active?.id?'#29796e':'#ded8ce','stroke-width':1/scale});
  t.setAttribute('x',(slot.x+tw-8-ox)/scale);t.setAttribute('y',(slot.y+18-oy)/scale);t.setAttribute('fill','#3c3531');const title=svgEl('title',{});title.textContent=full;g.append(bg,t,title);labels.append(g);
  }
