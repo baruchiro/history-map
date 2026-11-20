@@ -9,6 +9,9 @@ This is a public historical-map product. Read [project status](project/STATUS.md
 - [Parallel work, autonomy and disagreement](principles/collaboration.md)
 - [Validation and delivery](principles/validation.md)
 
+## Release gate
+Before proposing publication, apply [product release gates](project/RELEASE-GATES.md): verify the actual build, Baruch creator/contact credit, usage receipt and analysis, privacy/internal exclusions, and applicable conversation consent/storage and sharing requirements. A merged branch, installed SDK or passing tests alone is not release proof. Owner alone merges.
+
 ## Start here
 1. Read [backlog](project/BACKLOG.md) and [decisions](project/DECISIONS.md). Check current issues, pull requests and the default branch before starting duplicate work.
 2. Pick one bounded task, state acceptance criteria and affected files. Use your own branch/worktree or fork. This document grants no account access, publishing permission or spending authority.
