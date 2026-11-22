@@ -27,7 +27,9 @@ function make(env,config={}){
  function readExcluded(){return env.localStorage.getItem(STORE)==='1';}
  function reason(){
   if(config.enabled!==true)return 'disabled';
-  if(env.location.origin!=='https://baruchiro.github.io'||!env.location.pathname.startsWith('/history-map/'))return 'non-production';
+  const isProjectSite=env.location.origin==='https://baruchiro.github.io'&&env.location.pathname.startsWith('/history-map/');
+  const isCustomSite=env.location.origin==='https://history.baruchiro.com'&&env.location.pathname==='/';
+  if(!isProjectSite&&!isCustomSite)return 'non-production';
   if(env.navigator.webdriver)return 'automation';
   if(env.navigator.globalPrivacyControl===true||env.navigator.doNotTrack==='1'||env.doNotTrack==='1')return 'privacy-preference';
   try{if(readExcluded())return 'internal-browser';}catch{return 'storage-unavailable';}
