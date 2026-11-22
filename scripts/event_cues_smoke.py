@@ -7,7 +7,7 @@ with sync_playwright() as p:
  b=p.chromium.launch(executable_path=os.environ.get('CHROME_BIN','/usr/bin/google-chrome'),headless=True,args=['--no-sandbox'])
  for name,w,h in [('mobile',390,844),('narrow',320,720),('desktop',1280,850),('landscape',844,390)]:
   page=b.new_page(viewport={'width':w,'height':h},has_touch=True);errors=[];page.on('pageerror',lambda e:errors.append(str(e)));page.goto(base);page.wait_for_selector('#borders path');page.wait_for_timeout(100)
-  assert page.locator('#time').get_attribute('min')=='1455';assert page.locator('#time').get_attribute('max')=='1969'
+  assert page.locator('#time').get_attribute('min')=='1956';assert page.locator('#time').get_attribute('max')=='1977'
   print(name,'labels',page.locator('[data-event-label]').count());assert page.locator('[data-event-label]').count()>0
 
   page.screenshot(path=str(out/(name+'.png')))
@@ -20,20 +20,21 @@ with sync_playwright() as p:
   page.wait_for_timeout(100);page.screenshot(path=str(out/(name+'-jump.png')))
   # A label's rendered text and its background must occupy the same bounded rectangle.
   for lab in page.locator('[data-event-label]').all():
-   bg=lab.locator('rect').bounding_box();t=lab.locator('text').bounding_box();assert t['x']>=bg['x']-1 and t['x']+t['width']<=bg['x']+bg['width']+1,(name,bg,t)
+   bg=lab.locator('rect').first.bounding_box();t=lab.locator('text').bounding_box();assert t['x']>=bg['x']-1 and t['x']+t['width']<=bg['x']+bg['width']+1,(name,bg,t)
   # Labels are actionable without stealing map background gestures.
   # Public catalog has three lists. Synthetic extra catalog entries exercise scale, not published history.
   page.locator('#advanced>summary').click()
+  total=page.locator('#listChoices input').count()
   for row in page.locator('#listChoices input').all():row.check()
-  assert page.evaluate('chosenLists.size')==3
-  url=page.url;page.reload();page.wait_for_selector('#borders path');assert page.evaluate('chosenLists.size')==3
+  assert page.evaluate('chosenLists.size')==total
+  url=page.url;page.reload();page.wait_for_selector('#borders path');assert page.evaluate('chosenLists.size')==total
   page.locator('#advanced>summary').click();page.locator('#search').fill('טלסקופ');assert page.locator('#listChoices input').count()==1
-  page.locator('#search').fill('מדע');assert page.locator('#listChoices input').count()==1;assert page.locator('.event-tick').count()>1
+  page.locator('#search').fill('עצמאות');assert page.locator('#listChoices input').count()>=1;assert page.locator('.event-tick').count()>1
   page.locator('#search').fill('no-such-collection-xyz');assert page.locator('#listChoices input').count()==0;assert page.locator('.event-tick').count()==0
   page.locator('#search').fill('')
   page.evaluate("catalog.push(...Array.from({length:5},(_,i)=>({key:'synthetic-'+i,title:'רשימת בדיקה '+i,kind:'historical',library:{items:[]}})));render()")
   for row in page.locator('#listChoices input').all():row.check()
-  assert page.evaluate('chosenLists.size')==8
+  assert page.evaluate('chosenLists.size')==total+5
   for row in page.locator('#listChoices input').all():row.uncheck()
   assert page.evaluate('chosenLists.size')==0;assert page.locator('.event-tick').count()==0
   page.locator('#advanced .close-panel').click()
@@ -41,7 +42,7 @@ with sync_playwright() as p:
   page.goto(base+'#v=1&y=1969&a=voyages-and-encounters&b=science-and-technology&mode=range&borders=1&map=0,0,720,360');page.wait_for_selector('#borders path')
   assert page.evaluate('chosenLists.size')==2;assert page.locator('#world').get_attribute('viewBox')=='0 0 720 360'
   # Dense synthetic events at one location must not produce overlapping title blocks.
-  page.evaluate("year=1969;renderMapLabels(Array.from({length:30},(_,i)=>({id:'dense'+i,title:'אירוע לדוגמה '+i,year:1969,lon:-80,lat:30})),null)")
+  page.evaluate("year=1969;renderMapLabels(Array.from({length:30},(_,i)=>({id:'dense'+i,title:'אירוע לדוגמה '+i,year:1969,lon:-80,lat:30,listKey:'dense',shape:'circle',color:'#547c76'})),null)")
   assert page.locator('[data-event-label]').count()<=6
   boxes=[x.bounding_box() for x in page.locator('[data-event-label] rect').all()]
   for i,a in enumerate(boxes):

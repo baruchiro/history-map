@@ -24,7 +24,7 @@ with sync_playwright() as p:
   assert page.locator('#persia').count()==0
   # Tap the visible US event marker. Actual pointer dispatch must open details.
   pin=page.locator('#pins [role=button]').filter(has=page.locator('circle.mark')).first
-  pin.tap();assert page.locator('#eventInfo').evaluate('(el)=>el.open');assert not page.locator('body').evaluate('(el)=>el.classList.contains("quiet-map")')
+  pbox=pin.bounding_box();page.touchscreen.tap(pbox['x']+pbox['width']/2,pbox['y']+pbox['height']/2);assert page.locator('#eventInfo').evaluate('(el)=>el.open');assert not page.locator('body').evaluate('(el)=>el.classList.contains("quiet-map")')
   page.locator('#eventInfo .close-panel').click()
   page.locator('#world').scroll_into_view_if_needed()
   cdp=context.new_cdp_session(page);box=page.locator('#world').bounding_box();cx=box['x']+box['width']/2;cy=box['y']+box['height']/2
@@ -39,7 +39,7 @@ with sync_playwright() as p:
   for d in [10,25,40]:cdp.send('Input.dispatchTouchEvent',{'type':'touchMove','touchPoints':touches([(cx+d,cy+10)])})
   cdp.send('Input.dispatchTouchEvent',{'type':'touchEnd','touchPoints':[]});page.wait_for_timeout(150)
   pan=page.locator('#world').get_attribute('viewBox');assert pan!=after
-  assert page.locator('#selectionHint').inner_text()=='גבולות מקורבים · בחרו מקום או סמן'
+  assert 'territory=' not in page.url  # one-finger pan must not select a territory
   page.screenshot(path=f'{args.out}/{name}-gesture.png')
   url=page.url
   page.reload();page.wait_for_selector('#borders path')
