@@ -1,0 +1,104 @@
+{
+  "lists": [
+    {
+      "key": "empress-elisabeth-sisi",
+      "title": "Empress Elisabeth (Sisi): life behind Netflix's The Empress",
+      "kind": "historical",
+      "events": [
+        {
+          "title": "Elisabeth born at the Herzog-Max-Palais",
+          "year": 1837,
+          "date": "December 1837",
+          "place": "Munich, Germany",
+          "lat": 48.1437,
+          "lon": 11.5788,
+          "text": "Elisabeth, later Empress of Austria and known as Sisi, is born in her father's Munich city palace into the Bavarian Wittelsbach family. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.visiteuropeancastles.com/europe/palaces-castles-empress-elisabeth-of-austria/",
+          "publisher": "Visit European Castles",
+          "uncertainty": "Exact day not given by the cited page. Point marks the palace's approximate former site."
+        },
+        {
+          "title": "Betrothal to Franz Joseph at Bad Ischl",
+          "year": 1853,
+          "place": "Bad Ischl, Austria",
+          "lat": 47.7083,
+          "lon": 13.6233,
+          "text": "At the imperial summer residence in Bad Ischl, 15-year-old Elisabeth meets Emperor Franz Joseph, and they become engaged. The Netflix series The Empress dramatizes the start of their relationship. The series is fiction; this event is from the cited source.",
+          "source": "https://www.dw.com/en/across-europe-with-empress-sisi/g-45426869",
+          "publisher": "Deutsche Welle",
+          "uncertainty": "The page gives 1853 for the engagement; the first meeting is described as at Bad Ischl, without separate dates. Point is approximate (imperial villa area)."
+        },
+        {
+          "title": "Health stay on Corfu",
+          "year": 1860,
+          "place": "Corfu, Greece",
+          "lat": 39.6243,
+          "lon": 19.9217,
+          "text": "Elisabeth stays on Corfu for her health and comes to love the island, which later leads to her Achilleion palace. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.dw.com/en/across-europe-with-empress-sisi/g-45426869",
+          "publisher": "Deutsche Welle",
+          "uncertainty": "Source gives only the year 1860. Point marks Corfu town, approximate."
+        },
+        {
+          "title": "Crowned Queen of Hungary in Budapest",
+          "year": 1867,
+          "date": "8 June 1867",
+          "place": "Budapest, Hungary",
+          "lat": 47.5019,
+          "lon": 19.034,
+          "text": "Franz Joseph and Elisabeth are crowned King and Queen of Hungary in Budapest. Gödöllő Palace, a gift from the Hungarian people to the couple, later becomes a favorite retreat. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.dw.com/en/across-europe-with-empress-sisi/g-45426869",
+          "publisher": "Deutsche Welle",
+          "uncertainty": "Point is approximate, central Budapest (Matthias Church area); the cited page does not name the venue."
+        },
+        {
+          "title": "Murdered at Lake Geneva",
+          "year": 1898,
+          "date": "10 September 1898",
+          "place": "Geneva, Switzerland",
+          "lat": 46.2086,
+          "lon": 6.1527,
+          "text": "Elisabeth is stabbed by the anarchist Luigi Lucheni while walking along the shore of Lake Geneva and dies. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.dw.com/en/across-europe-with-empress-sisi/g-45426869",
+          "publisher": "Deutsche Welle",
+          "uncertainty": "Point is approximate, the lakeshore near her hotel."
+        },
+        {
+          "title": "Buried in the Capuchin Crypt, Vienna",
+          "year": 1898,
+          "date": "about 17 September 1898",
+          "place": "Vienna, Austria",
+          "lat": 48.2053,
+          "lon": 16.369,
+          "text": "Her body is brought to Vienna and buried in the Capuchin Crypt. Her wish to be buried on Corfu is not fulfilled. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.dw.com/en/across-europe-with-empress-sisi/g-45426869",
+          "publisher": "Deutsche Welle",
+          "uncertainty": "The source says burial was seven days after the assassination; the date is computed from 10 September 1898. Point is approximate."
+        },
+        {
+          "title": "Achilleion on Corfu sold to Wilhelm II",
+          "year": 1907,
+          "place": "Gastouri, Corfu, Greece",
+          "lat": 39.5636,
+          "lon": 19.9143,
+          "text": "Elisabeth's 'dream palace', the Achilleion, was little used after she lost interest in it and is sold to German emperor Wilhelm II. Today it houses a small museum about her. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.habsburger.net/en/chapter/traces-life-empress-elisabeth",
+          "publisher": "Die Welt der Habsburger",
+          "uncertainty": "The page gives the year only. Point marks the palace's approximate location."
+        },
+        {
+          "title": "Birthplace palace demolished",
+          "year": 1937,
+          "date": "1937/38",
+          "place": "Munich, Germany",
+          "lat": 48.1437,
+          "lon": 11.5788,
+          "text": "Her family home in Munich, the Herzog-Max-Palais, is demolished on Hitler's orders and replaced by a bank. Netflix's The Empress (Die Kaiserin, 2022-2026) dramatizes her life; this point comes from the cited historical source, not from any series scene.",
+          "source": "https://www.habsburger.net/en/chapter/traces-life-empress-elisabeth",
+          "publisher": "Die Welt der Habsburger",
+          "uncertainty": "Source says 1937/38; the earlier year is used. Point is approximate."
+        }
+      ]
+    }
+  ]
+}
