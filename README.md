@@ -1,6 +1,6 @@
 # Historical map and event-list contributions
 
-Live map: https://baruchiro.github.io/history-map/
+Live map: https://history.baruchiro.com/
 
 Historical map and reviewed list contributions, 18 November 2026. Static frontend in docs/; data-only source lists in lists/.
 
