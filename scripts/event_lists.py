@@ -82,6 +82,14 @@ def validate(bundle):
     require(len(encoded(bundle).encode('utf-8')) <= LIMIT, 'bundle exceeds 14500-byte map storage limit')
     return bundle
 
+def check_work(w):
+    require(type(w) is dict and {'type','title','url'} <= set(w) <= {'type','title','url','year'}, 'work: invalid fields')
+    require(w['type'] in ('series','film','book'), 'work type: series, film or book')
+    text(w['title'], 'work title', 120)
+    if 'year' in w: require(type(w['year']) is int and 1000 <= w['year'] <= 2100, 'work year')
+    source(w['url'])
+    require(len(w['url']) <= 500, 'work url too long')
+
 def digest(value):
     return hashlib.sha256(value.encode('utf-8')).hexdigest()[:20]
 
@@ -90,7 +98,8 @@ def compile_lists(data):
     bundle = {'collections': [], 'items': []}
     keys = set()
     for li in data['lists']:
-        require(type(li) is dict and set(li) == {'key','title','kind','events'}, 'list: invalid fields')
+        require(type(li) is dict and {'key','title','kind','events'} <= set(li) <= {'key','title','kind','events','work'}, 'list: invalid fields')
+        if 'work' in li: check_work(li['work'])
         key = text(li['key'], 'stable list key', 100)
         require(key not in keys, 'duplicate list key'); keys.add(key)
         require(li['kind'] in ('historical','tradition','fiction'), 'kind: historical, tradition or fiction')

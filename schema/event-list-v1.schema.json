@@ -148,6 +148,40 @@
                 }
               ]
             }
+          },
+          "work": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "title",
+              "url"
+            ],
+            "description": "Optional source work (series, film, book) that the list is built around.",
+            "properties": {
+              "type": {
+                "enum": [
+                  "series",
+                  "film",
+                  "book"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "year": {
+                "type": "integer",
+                "minimum": 1000,
+                "maximum": 2100
+              },
+              "url": {
+                "type": "string",
+                "maxLength": 500,
+                "pattern": "^https://"
+              }
+            }
           }
         }
       }
