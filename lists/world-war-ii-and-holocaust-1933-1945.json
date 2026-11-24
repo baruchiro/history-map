@@ -1,0 +1,176 @@
+{
+  "lists": [
+    {
+      "key": "world-war-ii-and-holocaust-1933-1945",
+      "title": "מלחמת העולם השנייה והשואה, 1933–1945",
+      "kind": "historical",
+      "events": [
+        {
+          "title": "עליית הנאצים לשלטון",
+          "year": 1933,
+          "date": "30 בינואר 1933",
+          "place": "ברלין, גרמניה",
+          "lat": 52.5163,
+          "lon": 13.3777,
+          "text": "היטלר מונה לקנצלר גרמניה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%A2%D7%9C%D7%99%D7%99%D7%AA_%D7%94%D7%A0%D7%90%D7%A6%D7%99%D7%9D_%D7%9C%D7%A9%D7%9C%D7%98%D7%95%D7%9F",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 1088645
+          }
+        },
+        {
+          "title": "חוקי נירנברג",
+          "year": 1935,
+          "date": "15 בספטמבר 1935",
+          "place": "נירנברג, גרמניה",
+          "lat": 49.4521,
+          "lon": 11.0767,
+          "text": "חוקי גזע שהגדירו מיהו אזרח גרמני ופגעו ביהודים.",
+          "source": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A7%D7%99_%D7%A0%D7%99%D7%A8%D7%A0%D7%91%D7%A8%D7%92",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 11056
+          }
+        },
+        {
+          "title": "ליל הבדולח",
+          "year": 1938,
+          "date": "9–10 בנובמבר 1938",
+          "place": "ברלין, גרמניה (נקודת ייחוס)",
+          "lat": 52.52,
+          "lon": 13.405,
+          "text": "פוגרום ביהודים ברחבי גרמניה ואוסטריה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9C%D7%99%D7%9C_%D7%94%D7%91%D7%93%D7%95%D7%9C%D7%97",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 2187
+          }
+        },
+        {
+          "title": "הפלישה לפולין",
+          "year": 1939,
+          "date": "1 בספטמבר 1939",
+          "place": "גדנסק, פולין",
+          "lat": 54.3956,
+          "lon": 18.6677,
+          "text": "תחילת מלחמת העולם השנייה באירופה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%A4%D7%9C%D7%99%D7%A9%D7%AA_%D7%92%D7%A8%D7%9E%D7%A0%D7%99%D7%94_%D7%94%D7%A0%D7%90%D7%A6%D7%99%D7%AA_%D7%9C%D7%A4%D7%95%D7%9C%D7%99%D7%9F",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 116812
+          }
+        },
+        {
+          "title": "גטו ורשה",
+          "year": 1940,
+          "date": "12 באוקטובר 1940",
+          "place": "ורשה, פולין",
+          "lat": 52.237,
+          "lon": 21.0175,
+          "text": "הגדול בגטאות היהודיים בפולין.",
+          "source": "https://he.wikipedia.org/wiki/%D7%92%D7%98%D7%95_%D7%95%D7%A8%D7%A9%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 12012
+          }
+        },
+        {
+          "title": "מבצע ברברוסה",
+          "year": 1941,
+          "date": "22 ביוני 1941",
+          "place": "פולין–ברית המועצות (נקודת ייחוס: ברסט)",
+          "lat": 52.0976,
+          "lon": 23.7341,
+          "text": "גרמניה פלשה לברית המועצות.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9E%D7%91%D7%A6%D7%A2_%D7%91%D7%A8%D7%91%D7%A8%D7%95%D7%A1%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 339
+          }
+        },
+        {
+          "title": "באבי יאר",
+          "year": 1941,
+          "date": "מ-29 בספטמבר 1941",
+          "place": "קייב, אוקראינה",
+          "lat": 50.4722,
+          "lon": 30.447,
+          "text": "רצח המוני של יהודים בגיא ליד קייב.",
+          "source": "https://he.wikipedia.org/wiki/%D7%91%D7%90%D7%91%D7%99_%D7%99%D7%90%D7%A8",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 25970
+          }
+        },
+        {
+          "title": "ועידת ואנזה",
+          "year": 1942,
+          "date": "20 בינואר 1942",
+          "place": "ואנזה, ברלין",
+          "lat": 52.4331,
+          "lon": 13.1664,
+          "text": "ישיבה של משרדי הממשל הנאצי בנושא \"הפתרון הסופי\".",
+          "source": "https://he.wikipedia.org/wiki/%D7%95%D7%A2%D7%99%D7%93%D7%AA_%D7%95%D7%90%D7%A0%D7%96%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 4392
+          }
+        },
+        {
+          "title": "מרד גטו ורשה",
+          "year": 1943,
+          "date": "19 באפריל – 16 במאי 1943",
+          "place": "ורשה, פולין",
+          "lat": 52.2437,
+          "lon": 20.9935,
+          "text": "המרד היהודי הגדול ביותר בתקופת השואה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%93_%D7%92%D7%98%D7%95_%D7%95%D7%A8%D7%A9%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 12412
+          }
+        },
+        {
+          "title": "הפלישה לנורמנדי",
+          "year": 1944,
+          "date": "6 ביוני 1944",
+          "place": "נורמנדי, צרפת",
+          "lat": 49.3706,
+          "lon": -0.875,
+          "text": "בעלות הברית פתחו חזית שנייה נגד גרמניה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%9C%D7%99%D7%A9%D7%94_%D7%9C%D7%A0%D7%95%D7%A8%D7%9E%D7%A0%D7%93%D7%99",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 920
+          }
+        },
+        {
+          "title": "כניעת גרמניה הנאצית",
+          "year": 1945,
+          "date": "7–8 במאי 1945",
+          "place": "ברלין (קרלסהורסט)",
+          "lat": 52.4954,
+          "lon": 13.5303,
+          "text": "סיום הלחימה באירופה בכניעה ללא תנאי.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9B%D7%A0%D7%99%D7%A2%D7%AA_%D7%92%D7%A8%D7%9E%D7%A0%D7%99%D7%94_%D7%94%D7%A0%D7%90%D7%A6%D7%99%D7%AA",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 69850
+          }
+        }
+      ]
+    }
+  ]
+}

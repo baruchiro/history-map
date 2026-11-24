@@ -1,0 +1,147 @@
+{
+  "lists": [
+    {
+      "key": "italian-unification-1815-1870",
+      "title": "תנועה לאומית באירופה: איחוד איטליה, 1815–1870",
+      "kind": "historical",
+      "events": [
+        {
+          "title": "קונגרס וינה",
+          "year": 1815,
+          "date": "1 באוקטובר 1814 – 9 ביוני 1815",
+          "place": "וינה, אוסטריה",
+          "lat": 48.2082,
+          "lon": 16.3738,
+          "text": "מעצמות אירופה עיצבו מחדש את היבשת; איטליה נשארה מחולקת.",
+          "source": "https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%A0%D7%92%D7%A8%D7%A1_%D7%95%D7%99%D7%A0%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 18007
+          }
+        },
+        {
+          "title": "איטליה הצעירה",
+          "year": 1831,
+          "date": "1831",
+          "place": "מרסיי, צרפת",
+          "lat": 43.2965,
+          "lon": 5.3698,
+          "text": "ג'וזפה מציני ייסד תנועה לאיחוד איטליה כרפובליקה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%98%D7%9C%D7%99%D7%94_%D7%94%D7%A6%D7%A2%D7%99%D7%A8%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 787053
+          }
+        },
+        {
+          "title": "מהפכות 1848 באיטליה",
+          "year": 1848,
+          "date": "1848–1849",
+          "place": "מילאנו, איטליה",
+          "lat": 45.4642,
+          "lon": 9.19,
+          "text": "מרידות נגד השלטון האוסטרי; סרדיניה הובילה את המלחמה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9E%D7%94%D7%A4%D7%9B%D7%95%D7%AA_1848_%D7%91%D7%9E%D7%93%D7%99%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%99%D7%98%D7%9C%D7%A7%D7%99%D7%95%D7%AA",
+          "publisher": "ויקיפדיה העברית",
+          "endYear": 1849,
+          "wikipedia": {
+            "language": "he",
+            "pageId": 2351018
+          }
+        },
+        {
+          "title": "הרפובליקה הרומית",
+          "year": 1849,
+          "date": "9 בפברואר 1849",
+          "place": "רומא, איטליה",
+          "lat": 41.9028,
+          "lon": 12.4964,
+          "text": "רפובליקה קצרת ימים בהנהגת מציני.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A8%D7%A4%D7%95%D7%91%D7%9C%D7%99%D7%A7%D7%94_%D7%94%D7%A8%D7%95%D7%9E%D7%99%D7%AA_(1849%E2%80%931850)",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 2341318
+          }
+        },
+        {
+          "title": "הקרב על סולפרינו",
+          "year": 1859,
+          "date": "24 ביוני 1859",
+          "place": "סולפרינו, לומברדיה",
+          "lat": 45.3874,
+          "lon": 10.5647,
+          "text": "צרפת וסרדיניה ניצחו את אוסטריה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%A7%D7%A8%D7%91_%D7%A1%D7%95%D7%9C%D7%A4%D7%A8%D7%99%D7%A0%D7%95",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 598930
+          }
+        },
+        {
+          "title": "משלחת האלף של גריבלדי",
+          "year": 1860,
+          "date": "מאי 1860",
+          "place": "מרסלה (Marsala), סיציליה",
+          "lat": 37.7987,
+          "lon": 12.436,
+          "text": "גריבלדי הוביל מתנדבים לכיבוש סיציליה ודרום איטליה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%97%D7%95%D7%93_%D7%90%D7%99%D7%98%D7%9C%D7%99%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 223525
+          }
+        },
+        {
+          "title": "הקמת ממלכת איטליה",
+          "year": 1861,
+          "date": "17 במרץ 1861",
+          "place": "טורינו, איטליה",
+          "lat": 45.0703,
+          "lon": 7.6869,
+          "text": "הוכרזה ממלכת איטליה תחת ויטוריו אמנואלה השני.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA_%D7%90%D7%99%D7%98%D7%9C%D7%99%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 560665
+          }
+        },
+        {
+          "title": "צירוף ונציה",
+          "year": 1866,
+          "date": "1866",
+          "place": "ונציה, איטליה",
+          "lat": 45.4408,
+          "lon": 12.3155,
+          "text": "ונציה צורפה לאיטליה בעקבות המלחמה השלישית.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%94%D7%A2%D7%A6%D7%9E%D7%90%D7%95%D7%AA_%D7%94%D7%90%D7%99%D7%98%D7%9C%D7%A7%D7%99%D7%AA_%D7%94%D7%A9%D7%9C%D7%99%D7%A9%D7%99%D7%AA",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 1406951
+          }
+        },
+        {
+          "title": "כיבוש רומא",
+          "year": 1870,
+          "date": "20 בספטמבר 1870",
+          "place": "רומא, איטליה",
+          "lat": 41.9071,
+          "lon": 12.504,
+          "text": "רומא נכבשה והושלם איחוד איטליה.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9B%D7%99%D7%91%D7%95%D7%A9_%D7%A8%D7%95%D7%9E%D7%90_(1870)",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 2350767
+          }
+        }
+      ]
+    }
+  ]
+}
