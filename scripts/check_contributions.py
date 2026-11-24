@@ -41,7 +41,9 @@ def check(root):
         if li['key'] != path.stem: raise ValueError('list key must match filename')
         if li['key'] in seen: raise ValueError('duplicate list key')
         seen.add(li['key'])
-        catalog['lists'].append({'key':li['key'],'title':li['title'],'kind':li['kind'],'library':b})
+        entry={'key':li['key'],'title':li['title'],'kind':li['kind'],'library':b}
+        if 'work' in li: entry['work']=li['work']
+        catalog['lists'].append(entry)
     return catalog
 
 def main():
