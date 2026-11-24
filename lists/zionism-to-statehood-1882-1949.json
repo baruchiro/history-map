@@ -1,0 +1,179 @@
+{
+  "lists": [
+    {
+      "key": "zionism-to-statehood-1882-1949",
+      "title": "מהתנועה הציונית להקמת המדינה, 1882–1949",
+      "kind": "historical",
+      "events": [
+        {
+          "title": "העלייה הראשונה",
+          "year": 1882,
+          "date": "1882–1903",
+          "place": "ראשון לציון",
+          "lat": 31.973,
+          "lon": 34.8066,
+          "text": "גל עלייה המוני של יהודים לארץ ישראל העות'מאנית.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A2%D7%9C%D7%99%D7%99%D7%94_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "endYear": 1903,
+          "wikipedia": {
+            "language": "he",
+            "pageId": 11902
+          }
+        },
+        {
+          "title": "הקונגרס הציוני הראשון",
+          "year": 1897,
+          "date": "29–31 באוגוסט 1897",
+          "place": "בזל, שווייץ",
+          "lat": 47.5596,
+          "lon": 7.5886,
+          "text": "הכינוס הגדול הראשון של התנועה הציונית, בהנהגת הרצל.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A7%D7%95%D7%A0%D7%92%D7%A8%D7%A1_%D7%94%D7%A6%D7%99%D7%95%D7%A0%D7%99_%D7%94%D7%A2%D7%95%D7%9C%D7%9E%D7%99_%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 189151
+          }
+        },
+        {
+          "title": "העלייה השנייה",
+          "year": 1904,
+          "date": "1904–1914",
+          "place": "יפו",
+          "lat": 32.054,
+          "lon": 34.752,
+          "text": "גל עלייה שהקים את היסודות של היישוב העברי החדש.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A2%D7%9C%D7%99%D7%99%D7%94_%D7%94%D7%A9%D7%A0%D7%99%D7%99%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "endYear": 1914,
+          "wikipedia": {
+            "language": "he",
+            "pageId": 12577
+          }
+        },
+        {
+          "title": "ייסוד אחוזת בית",
+          "year": 1909,
+          "date": "11 באפריל 1909",
+          "place": "יפו, תל אביב",
+          "lat": 32.0668,
+          "lon": 34.7647,
+          "text": "שכונה יהודית מחוץ ליפו, שממנה צמחה תל אביב.",
+          "source": "https://he.wikipedia.org/wiki/%D7%90%D7%97%D7%95%D7%96%D7%AA_%D7%91%D7%99%D7%AA",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 40075
+          }
+        },
+        {
+          "title": "הצהרת בלפור",
+          "year": 1917,
+          "date": "2 בנובמבר 1917",
+          "place": "לונדון, בריטניה",
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "text": "בריטניה הכריזה על תמיכה בבית לאומי לעם היהודי בארץ ישראל.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A6%D7%94%D7%A8%D7%AA_%D7%91%D7%9C%D7%A4%D7%95%D7%A8",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 272796
+          }
+        },
+        {
+          "title": "ועידת סן רמו",
+          "year": 1920,
+          "date": "19–26 באפריל 1920",
+          "place": "סן רמו, איטליה",
+          "lat": 43.8159,
+          "lon": 7.776,
+          "text": "המעצמות חילקו את האימפריה העות'מאנית; בריטניה קיבלה את המנדט על ארץ ישראל.",
+          "source": "https://he.wikipedia.org/wiki/%D7%95%D7%A2%D7%99%D7%93%D7%AA_%D7%A1%D7%9F_%D7%A8%D7%9E%D7%95",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 57522
+          }
+        },
+        {
+          "title": "המרד הערבי הגדול",
+          "year": 1936,
+          "date": "1936–1939",
+          "place": "ארץ ישראל המנדטורית",
+          "lat": 31.9,
+          "lon": 35.0,
+          "text": "מרד ערבי נגד השלטון הבריטי והתיישבות היהודית.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A8%D7%93_%D7%94%D7%A2%D7%A8%D7%91%D7%99_%D7%94%D7%92%D7%93%D7%95%D7%9C",
+          "publisher": "ויקיפדיה העברית",
+          "endYear": 1939,
+          "wikipedia": {
+            "language": "he",
+            "pageId": 14627
+          }
+        },
+        {
+          "title": "הספר הלבן של 1939",
+          "year": 1939,
+          "date": "17 במאי 1939",
+          "place": "לונדון, בריטניה",
+          "lat": 51.5074,
+          "lon": -0.1278,
+          "text": "בריטניה הגבילה בחדות את העלייה ורכישת הקרקעות של יהודים.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A1%D7%A4%D7%A8_%D7%94%D7%9C%D7%91%D7%9F_(1939)",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 31593
+          }
+        },
+        {
+          "title": "החלטת החלוקה של האו\"ם",
+          "year": 1947,
+          "date": "29 בנובמבר 1947",
+          "place": "פלאשינג מדוז, ניו יורק",
+          "lat": 40.7498,
+          "lon": -73.8447,
+          "text": "העצרת הכללית אישרה חלוקה לשתי מדינות, יהודית וערבית.",
+          "source": "https://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA_%D7%94%D7%97%D7%9C%D7%95%D7%A7%D7%94",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 1357
+          }
+        },
+        {
+          "title": "הכרזת העצמאות",
+          "year": 1948,
+          "date": "14 במאי 1948",
+          "place": "תל אביב",
+          "lat": 32.0646,
+          "lon": 34.7739,
+          "text": "הכרזה על הקמת מדינת ישראל.",
+          "source": "https://he.wikipedia.org/wiki/%D7%9E%D7%92%D7%99%D7%9C%D7%AA_%D7%94%D7%A2%D7%A6%D7%9E%D7%90%D7%95%D7%AA",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 1358
+          }
+        },
+        {
+          "title": "הסכמי שביתת הנשק",
+          "year": 1949,
+          "date": "1949",
+          "place": "רודוס, יוון",
+          "lat": 36.4349,
+          "lon": 28.2176,
+          "text": "הסכמים בין ישראל לשכנותיה סיימו רשמית את מלחמת העצמאות.",
+          "source": "https://he.wikipedia.org/wiki/%D7%94%D7%A1%D7%9B%D7%9E%D7%99_%D7%A9%D7%91%D7%99%D7%AA%D7%AA_%D7%94%D7%A0%D7%A9%D7%A7_%D7%91%D7%AA%D7%95%D7%9D_%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%94%D7%A2%D7%A6%D7%9E%D7%90%D7%95%D7%AA",
+          "publisher": "ויקיפדיה העברית",
+          "wikipedia": {
+            "language": "he",
+            "pageId": 62414
+          }
+        }
+      ]
+    }
+  ]
+}
