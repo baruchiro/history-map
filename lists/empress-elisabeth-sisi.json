@@ -4,6 +4,12 @@
       "key": "empress-elisabeth-sisi",
       "title": "Empress Elisabeth (Sisi): life behind Netflix's The Empress",
       "kind": "historical",
+      "work": {
+        "type": "series",
+        "title": "The Empress (Die Kaiserin)",
+        "year": 2022,
+        "url": "https://www.imdb.com/title/tt13720112/"
+      },
       "events": [
         {
           "title": "Elisabeth born at the Herzog-Max-Palais",
