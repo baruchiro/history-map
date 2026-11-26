@@ -45,7 +45,7 @@ class ListsTests(unittest.TestCase):
         self.assertIn('Attributed tradition', compile_lists(self.data)['items'][0]['text'])
     def test_size_budget(self):
         e=self.event(); self.data['lists'][0]['events']=[]
-        for i in range(20):
+        for i in range(30):
             x=dict(e); x['title']=f'Event {i}'; x['text']='א'*1000
             self.data['lists'][0]['events'].append(x)
         self.bad()
