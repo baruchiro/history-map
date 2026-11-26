@@ -40,3 +40,15 @@ WHERE timestamp >= toDateTime('2026-11-18 00:00:00', 'Asia/Jerusalem')
   AND properties.app = 'history-map'
   AND properties.internal_test = true
 GROUP BY event;
+
+-- Coarse device class (phone/tablet/desktop) per page load. Events before the device_class release have none.
+-- Counts page loads, not people.
+SELECT properties.device_class AS device_class,
+       count() AS page_loads
+FROM events
+WHERE timestamp >= toDateTime('2026-11-26 18:00:00', 'Asia/Jerusalem')
+  AND event = 'history_map_app_open'
+  AND properties.app = 'history-map'
+  AND (properties.internal_test IS NULL OR properties.internal_test != true)
+GROUP BY device_class
+ORDER BY page_loads DESC;

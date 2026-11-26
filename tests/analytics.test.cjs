@@ -8,3 +8,18 @@ test('allowlist and per-page event cap, fixed properties, no URL/referrer/conten
 test('no persistent identity or cookies',()=>{const c=ctx();c.client.bootstrap();a.equal(c.values.size,0);a.equal(c.env.document,undefined)});
 test('read key rejected in capture config and arbitrary destinations rejected',()=>{for(const cfg of [{token:'phx_NEVERFRONTEND'},{endpoint:'https://unapproved.invalid/'}]){const c=ctx(undefined,cfg);a.equal(c.client.bootstrap(),false);a.equal(c.requests.length,0)}});
 test('failed network is not retried or fatal',()=>{const c=ctx();c.env.fetch=()=>Promise.reject(Error());a.equal(c.client.bootstrap(),true);a.equal(c.client.bootstrap(),false)});
+
+test('device class is coarse, fixed-vocabulary and omitted when unknown',()=>{
+ const {deviceClass}=require('../docs/analytics');
+ const mm=coarse=>q=>({matches:q==='(pointer: coarse)'?coarse:false});
+ a.deepEqual(deviceClass({}),{});
+ a.deepEqual(deviceClass({matchMedia:mm(false),screen:{width:1920,height:1080}}),{device_class:'desktop'});
+ a.deepEqual(deviceClass({matchMedia:mm(true),screen:{width:390,height:844}}),{device_class:'phone'});
+ a.deepEqual(deviceClass({matchMedia:mm(true),screen:{width:820,height:1180}}),{device_class:'tablet'});
+ a.deepEqual(deviceClass({matchMedia:()=>{throw Error()}}),{});
+ for(const [coarse,screen,want] of [[true,{width:390,height:844},'phone'],[false,{width:1280,height:800},'desktop']]){
+  const c=ctx();c.env.matchMedia=mm(coarse);c.env.screen=screen;const client=make(c.env,c.config);client.bootstrap();
+  a.deepEqual(c.requests[0].body.properties,{app:'history-map',schema_version:1,$process_person_profile:false,device_class:want});
+  a.ok(!JSON.stringify(c.requests[0]).includes('844'));
+ }
+});
