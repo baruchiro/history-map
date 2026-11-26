@@ -139,6 +139,23 @@ function updateTimelineExtent(events){
  if(lo===hi){lo=Math.max(-3400,lo-1);hi=Math.min(2024,hi+1);}
  $('time').min=String(lo);$('time').max=String(hi);$('min').textContent=formatYear(lo);$('max').textContent=formatYear(hi);$('time').disabled=!events.length;
  $('time').setAttribute('aria-valuetext',formatYear(year));
+ renderYearScale();
+}
+/* Intermediate year labels fill whatever width the timeline has: more room shows more years, narrow screens keep only the end labels. */
+function renderYearScale(){
+ const el=$('yearScale');el.replaceChildren();
+ const min=Number($('time').min),max=Number($('time').max),span=max-min,width=el.clientWidth,inset=8;
+ if(!width||!(span>0))return;
+ const budget=Math.floor((width-2*inset)/72);
+ if(budget<2)return;
+ const steps=[1,2,5,10,20,25,50,100,200,250,500,1000,2000];
+ const step=steps.find(s=>Math.floor(span/s)<=budget)||2500;
+ for(let y=Math.ceil((min+1)/step)*step;y<max;y+=step){
+  if(y===0)continue;
+  const mark=text('span',formatYear(y));
+  mark.style.left=inset+(1-(y-min)/span)*(width-2*inset)+'px';
+  el.append(mark);
+ }
 }
 
 function appendWikipediaIntro(event){

@@ -21,6 +21,7 @@ with sync_playwright() as p:
   assert page.evaluate('document.documentElement.scrollWidth===innerWidth')
   assert page.locator('#world').is_visible()
   assert page.locator('#copyView').is_visible()
+  assert page.locator('#yearScale span').count()>0
   assert page.locator('#persia').count()==0
   # Tap the visible US event marker. Actual pointer dispatch must open details.
   pin=page.locator('#pins [role=button]').filter(has=page.locator('circle.mark')).first
