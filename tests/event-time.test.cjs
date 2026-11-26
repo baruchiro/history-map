@@ -6,10 +6,26 @@ test('Rambam completion event does not persist at 1922 in nearby-year mode',()=>
  assert.equal(time.includes(point(1180),1180,true),true);
  assert.equal(time.includes(point(1180),1922,false),true);
 });
-test('window includes 25 years either side, not arbitrary lifetimes',()=>{
+test('default window includes 25 years either side, not arbitrary lifetimes',()=>{
  for(const y of [1155,1180,1205])assert.equal(time.includes(point(y),1180,true),true);
  for(const y of [1154,1206])assert.equal(time.includes(point(y),1180,true),false);
  assert.equal(time.includes(point(1181),1180,false),false);
+});
+test('window scales with the visible timeline span, capped at 25',()=>{
+ assert.equal(time.windowFor(12),0);
+ assert.equal(time.windowFor(21),0);
+ assert.equal(time.windowFor(400),2);
+ assert.equal(time.windowFor(1000),5);
+ assert.equal(time.windowFor(5424),25);
+ assert.equal(time.windowFor(100000),25);
+ assert.equal(time.windowFor(0),0);
+ assert.equal(time.windowFor(NaN),0);
+});
+test('a short timeline shows a point event only in its own year',()=>{
+ const w=time.windowFor(12);
+ assert.equal(time.includes(point(1935),1933,true,w),false);
+ assert.equal(time.includes(point(1935),1935,true,w),true);
+ assert.equal(time.includes(point(1933),1934,true,w),false);
 });
 test('span record stays visible through its whole range in nearby-year mode',()=>{
  const sura=span(225,1033);
@@ -43,6 +59,7 @@ test('labels show the span or the single year',()=>{
 });
 test('point-event and span meaning remain explicit in the description',()=>{
  assert.equal(time.describe(1922,true,String),'אירועים מ־1897 עד 1947 · רשומות טווח נראות בכל שנות הטווח');
+ assert.equal(time.describe(1933,true,String,0),'אירועים בשנת 1933 · רשומות טווח נראות בכל שנות הטווח');
  assert.equal(time.describe(1922,false,String),'אירועים שהתרחשו עד 1922 · רשומות טווח נראות משנת התחילתן');
 });
 test('shared modes remain backward compatible, corrected view uses range',()=>{
