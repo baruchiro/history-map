@@ -170,6 +170,45 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
     },
+    "he:39663": {
+      "language": "he",
+      "pageId": 39663,
+      "title": "אנשלוס",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%90%D7%A0%D7%A9%D7%9C%D7%95%D7%A1",
+      "revisionId": 43198455,
+      "retrievedAt": "2026-11-26T06:19:19.946489+00:00",
+      "excerpt": "אַנְשְׁלוּס (בגרמנית: Anschluss, תרגום מילולי: \"הצטרפות\" או \"חיבור\" ‏‏Ⓘ‏) הוא הכינוי לסיפוחה של אוסטריה הפשיסטית לרייך השלישי ב-12 במרץ 1938, בעקבותיו המדינה האוסטרית בוטלה והפכה למחוז ברייך הגרמני. אף שאיחוד בין אוסטריה לגרמניה נאסר במפורש בהסכם ורסאי, המעצמות לא מנעו את הסיפוח, בתקווה כי היטלר יסתפק בסיפוח אוסטריה וחבל הסודטים (מצ'כוסלובקיה), ולא ישתלט בכוח על שטחים נוספים.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:16576": {
+      "language": "he",
+      "pageId": 16576,
+      "title": "ועידת אוויאן",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%95%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%95%D7%95%D7%99%D7%90%D7%9F",
+      "revisionId": 42842456,
+      "retrievedAt": "2026-11-26T06:19:20.084165+00:00",
+      "excerpt": "ועידת אוויאן היא ועידה שהתכנסה בעיר אוויאן  שבצרפת ב-6 ביולי 1938, לדיון בבעיית הפליטים היהודים ופליטים אחרים, בהם מתנגדי המשטר הנאצי, שנמלטו משטחי גרמניה הנאצית. רוב המדינות שהשתתפו בוועידה היו מוכנות להמשיך ולקבל פליטים נוספים על פי המכסות הקיימות, אך לא הסכימו להרחיבן. רוב הפליטים היהודים באותה תקופה נקלטו בארצות הברית, דרום אמריקה, ארץ ישראל ובריטניה.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:16208": {
+      "language": "he",
+      "pageId": 16208,
+      "title": "ועידת מינכן",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%95%D7%A2%D7%99%D7%93%D7%AA_%D7%9E%D7%99%D7%A0%D7%9B%D7%9F",
+      "revisionId": 44259083,
+      "retrievedAt": "2026-11-26T06:19:20.225717+00:00",
+      "excerpt": "ועידת מינכן (שבצ'כוסלובקיה קיבלה את השם בגידת מינכן) הייתה ועידת פסגה שכונסה ב־29 בספטמבר 1938, לפני מלחמת העולם השנייה, בין אדולף היטלר (פיהרר גרמניה הנאצית), נוויל צ'מברלין (ראש ממשלת הממלכה המאוחדת) אדואר דאלאדיה (ראש ממשלת צרפת) ובניטו מוסוליני (ראש ממשלת איטליה). בוועידה נידונה דרישתו של היטלר לספח לגרמניה את חבל הסודטים, שלא היה שטח בריבונות גרמנית ושמאז הסכמי השלום בתום מלחמת העולם הראשונה היה תחת ריבונותה של צ'כוסלובקיה. הוועידה התקיימה בעיר הגרמנית מינכן והביאה להסכם מינכן, בו נקבע סיפוחו לגרמניה של חבל הסודטים שבצ'כוסלובקיה. בחתימת ההסכם לא השתתפו נציגים כלשהם מממשלת צ'כוסלובקיה ואף לא נציגים של ברית המועצות – בעלת בריתה של צ'כוסלובקיה. במרוצת הזמן הפך הביטוי \"מדיניות מינכן\" לכינוי למדיניות פיוס כלפי רודן תוקפן. ההסכם נחשב לאחד מההסכמים השנויים במחלוקת אי פעם.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
     "he:116812": {
       "language": "he",
       "pageId": 116812,
@@ -192,6 +231,19 @@
       "retrievedAt": "2026-11-24T18:53:38.992139+00:00",
       "excerpt": "גטו ורשה היה הגדול בגטאות היהודיים בפולין בתקופת השואה. הגטו הוקם על ידי הנאצים ב-12 באוקטובר 1940 ובשיאו מנה כ-450,000 נפש. הגטו נחרב במאי 1943 בתום מרד גטו ורשה, שהיה הגדול מבין מרידות היהודים בתקופת השואה.",
       "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:841655": {
+      "language": "he",
+      "pageId": 841655,
+      "title": "הקרב על בריטניה",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%A7%D7%A8%D7%91_%D7%A2%D7%9C_%D7%91%D7%A8%D7%99%D7%98%D7%A0%D7%99%D7%94",
+      "revisionId": 43909140,
+      "retrievedAt": "2026-11-26T06:19:20.731400+00:00",
+      "excerpt": "הקרב על בריטניה (באנגלית: The Battle of Britain, בגרמנית: Luftschlacht um England) היה מערכה אווירית שהתחוללה במהלך מלחמת העולם השנייה בין הלופטוואפה, חיל האוויר הגרמני, לבין חיל האוויר המלכותי הבריטי. המערכה התחוללה בחודשי הקיץ והסתיו של שנת 1940. הייתה זו הפעם הראשונה בהיסטוריה שבה התחוללה מערכה צבאית בצורה בלעדית בזירה האווירית, והייתה זו מערכת ההפצצות האוויריות הכבדה ביותר עד אז.",
+      "modified": true,
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
@@ -222,6 +274,19 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
     },
+    "he:11526": {
+      "language": "he",
+      "pageId": 11526,
+      "title": "המתקפה על פרל הארבור",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%AA%D7%A7%D7%A4%D7%94_%D7%A2%D7%9C_%D7%A4%D7%A8%D7%9C_%D7%94%D7%90%D7%A8%D7%91%D7%95%D7%A8",
+      "revisionId": 44261085,
+      "retrievedAt": "2026-11-26T06:19:22.097941+00:00",
+      "excerpt": "המתקפה על פרל הארבור הייתה מתקפת פתע של האימפריה היפנית על הבסיס האמריקאי בפרל הארבור שבהוואי, בבוקר יום ראשון 7 בדצמבר 1941 במהלך מלחמת העולם השנייה. בתקופת המלחמה שימש נמל פרל הארבור כבסיס המרכזי של חיל הים של ארצות הברית באוקיינוס השקט. את המתקפה ביצעו מטוסים של הצי הקיסרי היפני, שהמריאו מנושאות מטוסים. בשעה 7:55 בבוקר הוביל מיטסואו פושידה , הטייס היפני את המתקפה. ההתקפה על פרל הארבור נצרבה בתודעה האמריקאית כאירוע של קלון לאומי, והיא נחשבת לכישלון המודיעיני הגדול ביותר בתולדות ארצות הברית, עד פיגועי 11 בספטמבר. כמה שעות אחרי המתקפה הכריזה יפן מלחמה על ארצות הברית למחרת נשא נשיא ארצות הברית רוזוולט את נאום הקלון, וארצות הברית הכריזה מלחמה על יפן שהסתיימה בכניעת האימפריה היפנית.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
     "he:4392": {
       "language": "he",
       "pageId": 4392,
@@ -235,6 +300,45 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
     },
+    "he:21617": {
+      "language": "he",
+      "pageId": 21617,
+      "title": "סטרומה",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A1%D7%98%D7%A8%D7%95%D7%9E%D7%94",
+      "revisionId": 43918162,
+      "retrievedAt": "2026-11-26T06:19:22.428108+00:00",
+      "excerpt": "סטרומה הייתה אוניית מעפילים שנשאה על סיפונה 768 (המספר המדויק שנוי במחלוקת) יהודים שניסו להימלט מרומניה הפשיסטית שבהנהגת יון אנטונסקו, והוטבעה בים השחור על ידי צוללת סובייטית ביום ז' באדר תש\"ב, 24 בפברואר 1942. ההפלגה אורגנה במסגרת מפעל ההעפלה אף על פי של האצ\"ל. אסון סטרומה - טביעת כל מעפיליה ואנשי צוותה למעט אחד נחשבת לאסון הגדול בתולדות ההעפלה לארץ ישראל ולאחד האסונות הגדולים ביותר בהיקפם של טביעת אונייה אזרחית בזמן מלחמת העולם השנייה.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:9942": {
+      "language": "he",
+      "pageId": 9942,
+      "title": "קרב סטלינגרד",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A7%D7%A8%D7%91_%D7%A1%D7%98%D7%9C%D7%99%D7%A0%D7%92%D7%A8%D7%93",
+      "revisionId": 44064483,
+      "retrievedAt": "2026-11-26T06:19:22.582318+00:00",
+      "excerpt": "המערכה באזור סטָלינגרָד הייתה מערכה צבאית מכרעת, שהתחוללה במסגרת החזית המזרחית במלחמת העולם השנייה בין ברית המועצות למדינות הציר בראשות גרמניה הנאצית באזור העיר סטלינגרד (וולגוגרד) בדרום רוסיה של ימינו, מאמצע יולי 1942 עד ראשית פברואר 1943.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:12813": {
+      "language": "he",
+      "pageId": 12813,
+      "title": "מחנה הריכוז וההשמדה אושוויץ",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%9E%D7%97%D7%A0%D7%94_%D7%94%D7%A8%D7%99%D7%9B%D7%95%D7%96_%D7%95%D7%94%D7%94%D7%A9%D7%9E%D7%93%D7%94_%D7%90%D7%95%D7%A9%D7%95%D7%95%D7%99%D7%A5",
+      "revisionId": 44274471,
+      "retrievedAt": "2026-11-26T06:19:22.734556+00:00",
+      "excerpt": "מחנה הריכוז וההשמדה אושוויץ (מגרמנית: ‏‏Ⓘ‏, נהגה: אָאוּשְׁוִויץ) שבדרום פולין היה הגדול במחנות ההשמדה שהקימה גרמניה הנאצית במלחמת העולם השנייה, ובו נרצחו כמיליון ומאה אלף נפשות, בהם כמיליון יהודים, יותר מבכל אתר אחר במהלך המלחמה. אושוויץ החל לפעול כמחנה ריכוז ביוני 1940. מאמצע 1942 עד שחרורו בתחילת 1945 שימש גם כמחנה השמדה, והיה מחנה ההשמדה הנאצי שפעל במשך הזמן הרב ביותר, ובו הגיע לשיאו תיעושו של רצח ההמונים. בשיאו היה אושוויץ קומפלקס שכלל 45 מחנות שהשתרעו על 40 קמ\"ר.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
     "he:12412": {
       "language": "he",
       "pageId": 12412,
@@ -243,6 +347,19 @@
       "revisionId": 44242450,
       "retrievedAt": "2026-11-24T18:53:39.660893+00:00",
       "excerpt": "מרד גטו ורשה (19 באפריל – 16 במאי 1943, י\"ד בניסן – י\"א באייר ה'תש\"ג) היה המרד היהודי הגדול ביותר שפרץ בתקופת השואה, והפך לסמלה המובהק של ההתנגדות היהודית בשואה. התקוממות הלוחמים היהודים בתוך גטו ורשה בפולין הכבושה הייתה ניסיון למנוע מהנאצים לשלח את שארית אוכלוסיית הגטו למחנה ההשמדה טרבלינקה, או לפחות למות תוך כדי לחימה.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:2115415": {
+      "language": "he",
+      "pageId": 2115415,
+      "title": "המרד במחנה סוביבור",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A8%D7%93_%D7%91%D7%9E%D7%97%D7%A0%D7%94_%D7%A1%D7%95%D7%91%D7%99%D7%91%D7%95%D7%A8",
+      "revisionId": 43788370,
+      "retrievedAt": "2026-11-26T06:19:23.100121+00:00",
+      "excerpt": "המרד במחנה סוביבור (בגרמנית: Aufstand von Sobibór) היה מרד של כ-600 אסירים שפרץ ב-14 באוקטובר 1943 במהלך מלחמת העולם השנייה והשואה במחנה ההשמדה סוביבור שבפולין הכבושה. היה זה המרד השני במחנה השמדה, המוצלח בחלקו, של אסירים יהודים כנגד כוחות אס אס, לאחר המרד בטרבלינקה. מרד הזונדרקומנדו באושוויץ ב-7 באוקטובר 1944 היה השלישי והאחרון מבין שלוש מרידות שפרצו במחנות ההשמדה.",
       "modified": true,
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -261,6 +378,32 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
     },
+    "he:602578": {
+      "language": "he",
+      "pageId": 602578,
+      "title": "שואת יהודי הונגריה",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%90%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%94%D7%95%D7%A0%D7%92%D7%A8%D7%99%D7%94",
+      "revisionId": 43746022,
+      "retrievedAt": "2026-11-26T06:19:28.061687+00:00",
+      "excerpt": "שואת יהודי הונגריה התרחשה במהלכה של מלחמת העולם השנייה ונרצחו בה כ-564,500 יהודי הונגריה, מתוך כ-725 אלף (77%). הרצח בוצע ברובו בתוך כחודשיים, בין 15 במאי ל-9 ביולי 1944 שבמהלכם גורשו לאושוויץ-בירקנאו ונרצחו יותר מ-430 אלף יהודים. רוב היתר נרצחו בתקופה שלאחר הדחת הורטי בין נובמבר 1944 לפברואר 1945.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:20588": {
+      "language": "he",
+      "pageId": 20588,
+      "title": "מרד ורשה",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%93_%D7%95%D7%A8%D7%A9%D7%94",
+      "revisionId": 43552815,
+      "retrievedAt": "2026-11-26T06:19:28.208545+00:00",
+      "excerpt": "מרד ורשה היה התקוממות כושלת של המחתרת הפולנית נגד צבא הכיבוש הנאצי במהלך מלחמת העולם השנייה. דיכוי המרד על ידי הצבא הנאצי היה אכזרי ביותר, ובמהלכו נהרגו לפחות 200 אלף אזרחים פולנים והעיר ורשה נחרבה כמעט כליל.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
     "he:69850": {
       "language": "he",
       "pageId": 69850,
@@ -270,6 +413,32 @@
       "retrievedAt": "2026-11-24T18:53:39.947710+00:00",
       "excerpt": "הזירה האירופית במלחמת העולם השנייה הסתיימה בכניעה ללא תנאי של גרמניה הנאצית, ב-7 וב-8 במאי 1945.",
       "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:909537": {
+      "language": "he",
+      "pageId": 909537,
+      "title": "הטלת פצצות האטום על הירושימה ועל נגסאקי",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%98%D7%9C%D7%AA_%D7%A4%D7%A6%D7%A6%D7%95%D7%AA_%D7%94%D7%90%D7%98%D7%95%D7%9D_%D7%A2%D7%9C_%D7%94%D7%99%D7%A8%D7%95%D7%A9%D7%99%D7%9E%D7%94_%D7%95%D7%A2%D7%9C_%D7%A0%D7%92%D7%A1%D7%90%D7%A7%D7%99",
+      "revisionId": 44125379,
+      "retrievedAt": "2026-11-26T06:19:28.518509+00:00",
+      "excerpt": "הטלת פצצות האטום על הירושימה ועל נגסאקי היו שתי תקיפות בנשק גרעיני שביצעה ארצות הברית נגד האימפריה היפנית בהוראת נשיא ארצות הברית הארי טרומן, בימיה האחרונים של מלחמת העולם השנייה. פצצת האטום שכונתה \"ילד קטן\" הוטלה על העיר הירושימה ב-6 באוגוסט 1945. פצצה גרעינית נוספת, שכונתה \"איש שמן\", הוטלה על העיר נגסאקי שלושה ימים לאחר מכן, ב-9 באוגוסט 1945. הטלת שתי פצצות האטום על יפן הייתה השימוש המבצעי הראשון - והיחיד - שנעשה בנשק גרעיני עד היום.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:164451": {
+      "language": "he",
+      "pageId": 164451,
+      "title": "משפטי נירנברג",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%A4%D7%98%D7%99_%D7%A0%D7%99%D7%A8%D7%A0%D7%91%D7%A8%D7%92",
+      "revisionId": 44217340,
+      "retrievedAt": "2026-11-26T06:19:28.663160+00:00",
+      "excerpt": "משפטי נירנברג היו סדרת משפטים שנערכו לאחר מלחמת העולם השנייה, בשנים 1945 ו-1946, שבהם הועמדו לדין מספר בעלי תפקידים נאצים וראשי המשטר בגרמניה הנאצית, באשמת ביצוע פשעי המלחמה ופשעים נגד האנושות, כגון רצח עם, בין השנים 1933 ל-1945. המשפטים נערכו על ידי בעלות הברית בעיר נירנברג בבוואריה שבגרמניה. פסקי הדין שניתנו במסגרתם קבעו הלכות חדשות בתחום דיני מלחמה, במסגרת המשפט הבין-לאומי הפומבי.",
+      "modified": true,
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
