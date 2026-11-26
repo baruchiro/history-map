@@ -54,3 +54,14 @@ a:hover{text-decoration:underline}
 .export-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}.export-row button{flex:1 1 30%;min-height:44px}#yearScale{position:relative;height:14px;direction:ltr;font-size:10px;color:#6E665A;margin:-1px 0 1px}#yearScale span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap;font-variant-numeric:tabular-nums;line-height:1.2}
 
 .basic-bar #exportView{position:fixed;left:14px;top:72px}.basic-bar #reset{top:128px!important}#advanced{top:184px!important}.year-editing #exportView{visibility:hidden}
+
+.export-row button svg{display:block;width:100%;max-width:96px;height:auto;margin:0 auto}.export-row button{padding:10px 6px;min-height:84px}
+
+.fmt-row{display:flex;gap:8px;margin:4px 0 8px}.fmt-row button{flex:1;min-height:38px;font-weight:600}.fmt-row button[aria-pressed=true]{background:#29251E;color:#fff}
+#printSheet{display:none}
+@page{margin:14mm}
+@media print{html,body{overflow:visible!important;height:auto!important;background:#fff}body.printing main,body.printing dialog{display:none!important}body.printing #printSheet{display:block;direction:rtl;font-family:'Noto Sans Hebrew',Arial,sans-serif;color:#222;font-size:11pt;line-height:1.5}
+#printSheet h1{font-size:18pt;margin:0 0 4mm}#printSheet h2{font-size:13pt;margin:6mm 0 2mm;border-bottom:1px solid #999;padding-bottom:1mm;break-after:avoid}
+#printSheet .pe{break-inside:avoid;margin:0 0 3.5mm;padding-right:3mm;border-right:3px solid var(--c,#888)}#printSheet .pe b{font-size:11.5pt}#printSheet .pe small{display:block;color:#555;font-size:9pt;direction:ltr;text-align:right;word-break:break-all}
+#printSheet .pl span{display:inline-block;margin-left:5mm;font-size:9pt}#printSheet .pl i{display:inline-block;width:3mm;height:3mm;border-radius:50%;margin-left:1.5mm;background:var(--c)}
+#printSheet>div>img{display:block;width:100%;height:auto;max-height:250mm;object-fit:contain}}
