@@ -68,3 +68,5 @@ a:hover{text-decoration:underline}
 
 #goYear,#copyShare,#copyPrompt,#excludeBrowser,#includeBrowser,#prev,#next,#play,.settings-nav button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:48px}.steps,.time-head{align-items:center}
 #goYear svg,#copyShare svg,#copyPrompt svg,#excludeBrowser svg,#includeBrowser svg,#prev svg,#next svg,#play svg,.settings-nav button svg{width:22px;height:22px;max-width:22px;flex:none;display:block}
+
+@media print{#printSheet>div:not(:last-child){break-after:page}#printSheet>div{break-inside:avoid}}

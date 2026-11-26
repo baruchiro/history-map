@@ -53,26 +53,40 @@ function mapPart(st,items,y,showTime){
  g+='</svg>';
  return {out:g,y:y+h};
 }
+/* Vertical, proportional timeline: dots sit at their real time position (top = earliest), titles only. Titles that would collide are pushed down and joined to their dot by a thin leader. Events with an end year get a bar next to the axis. */
+function niceStep(span,pxPer,minPx,monthly){
+ const opts=monthly?[1,2,3,6,12,24,60,120,240,600,1200,2400,6000,12000]:[12,24,60,120,240,600,1200,2400,6000,12000,24000];
+ return opts.find(o=>o*pxPer>=minPx)||opts[opts.length-1];
+}
 function buildTimeline(st){
- const {measure,label}=st,S=st.startIndex,items=ordered(st.events,S);
+ const {measure,label}=st,S=st.startIndex,E=st.endIndex,items=ordered(st.events,S);
  let body='',y=64;
  body+=text(W-PAD,y,st.title||'ציר זמן',{size:30,weight:700});y+=34;
- const lg=legend(st.lists,y,measure);body+=lg.out;y=lg.y+14;
- const lineX=W-PAD-150,textR=lineX-26,textW=textR-PAD-6,start=y;let rows='';
+ const lg=legend(st.lists,y,measure);body+=lg.out;y=lg.y+24;
+ const lo=Math.min(...items.map(S)),hi=Math.max(...items.map(e=>isRange(e)?E(e)+1:S(e)));
+ const span=Math.max(1,hi-lo),rowH=34,target=Math.min(5200,Math.max(1100,items.length*80)),pxPer=target/span;
+ const y0=y+10,posY=i=>y0+(i-lo)*pxPer;
+ /* range bars on lanes right of the axis */
+ const lineX=W-PAD-230,laneEnds=[],bars=[];
+ for(const e of items){if(!isRange(e))continue;const t0=posY(S(e)),t1=Math.max(posY(E(e)+1),t0+8);let l=laneEnds.findIndex(v=>v<=t0);if(l<0){l=laneEnds.length;}laneEnds[l]=t1;bars.push({e,l,t0,t1});}
+ const lanes=laneEnds.length,tickX=lineX+22+lanes*12+6,textR=lineX-28,textW=textR-PAD-6;
+ let ticks='',rows='',prevTy=-1e9,dots=[],cuts=[];
+ const step=niceStep(span,pxPer,64,st.monthMode);
+ for(let i=Math.ceil(lo/step)*step;i<=hi;i+=step){const ty=posY(i);ticks+=`<line x1="${lineX-5}" y1="${num(ty)}" x2="${lineX+5}" y2="${num(ty)}" stroke="${LINE}" stroke-width="2"/>`+text(tickX,ty+5,st.monthMode?st.formatMonth(i):st.formatYear(Math.floor(i/12)),{size:14,fill:MUTED,anchor:'start'});}
+ for(const b of bars){rows+=`<rect x="${lineX+14+b.l*12}" y="${num(b.t0)}" width="6" height="${num(b.t1-b.t0)}" rx="3" fill="${b.e.color}" fill-opacity=".45"/>`;}
+ let endY=posY(hi);
  for(const e of items){
-  const t=wrap(e.text||'',textW,16,measure,2),place=fit(e.place||'',textW,15,measure);
-  const rowH=34+22+(t.length?t.length*21+4:0)+20;
-  rows+=mark(e.shape,lineX,y+10,8,e.color,'stroke="#fff" stroke-width="2"');
-  rows+=text(lineX+20,y+16,label(e),{size:19,weight:700,fill:e.color,anchor:'start'});
-  rows+=text(textR,y+16,fit(e.title,textW,21,measure),{size:21,weight:700});
-  rows+=text(textR,y+38,place,{size:15,fill:MUTED});
-  t.forEach((ln,i)=>{rows+=text(textR,y+60+i*21,ln,{size:16});});
-  y+=rowH;
+  const py=posY(S(e)),ty=Math.max(py,prevTy+rowH);prevTy=ty;
+  if(ty-py>3)rows+=`<polyline points="${lineX-9},${num(py)} ${textR+10},${num(ty)}" fill="none" stroke="${e.color}" stroke-opacity=".55" stroke-width="1.5"/>`;
+  rows+=mark(e.shape,lineX,py,7,e.color,'stroke="#fff" stroke-width="2"');
+  rows+=text(textR,ty+6,fit(e.title,textW,20,measure),{size:20,weight:700});
+  dots.push({id:e.id,y:py,ty});cuts.push(ty-rowH/2+4);endY=Math.max(endY,ty+rowH/2);
  }
- body+=`<line x1="${lineX}" y1="${start}" x2="${lineX}" y2="${y-14}" stroke="${LINE}" stroke-width="3"/>`+rows;
- y+=10;body+=footer(y);
- return frame(y+24,body);
+ body+=`<line x1="${lineX}" y1="${num(y0-12)}" x2="${lineX}" y2="${num(endY+8)}" stroke="${LINE}" stroke-width="3"/>`+ticks+rows;
+ y=endY+40;body+=footer(y);
+ const out=frame(y+24,body);out.dots=dots;out.cuts=cuts;return out;
 }
+function isRange(e){return e.endYear!==undefined&&e.endYear!==null;}
 /* A 2:1 view box around every event, with margin, inside the 720x360 world. */
 function fitView(events){
  const xs=events.map(e=>(e.lon+180)*2),ys=events.map(e=>(90-e.lat)*2),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
@@ -112,5 +126,5 @@ function build(kind,st){
  if(kind==='both')return buildMap(st,true);
  throw new Error('unknown export kind');
 }
-const api={build,wrap,fit,fitView,W};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.HistoryExport=api;
+const api={build,wrap,fit,fitView,W,isRange};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.HistoryExport=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

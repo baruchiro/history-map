@@ -32,3 +32,11 @@ test('wrap and fit respect width and line cap',()=>{
  const lines=ex.wrap('מילה '.repeat(40),200,16,measure,3);assert.equal(lines.length,3);assert.ok(lines[2].endsWith('…'));
  assert.ok(ex.fit('x'.repeat(100),100,16,measure).endsWith('…'));assert.equal(ex.fit('קצר',100,16,measure),'קצר');
 });
+test('vertical timeline: dot positions are proportional to time, ranges get a bar',()=>{
+ const E=[{...ev('a',1933,1,1,1),title:'א'},{...ev('b',1933,2,1,1),title:'ב'},{...ev('c',1933,7,1,1),title:'ג'},{...ev('r',1933,3,1,1),endYear:1933,title:'טווח'}];
+ const o=ex.build('timeline',st({events:E}));
+ const y=Object.fromEntries(o.dots.map(d=>[d.id,d.y]));
+ const g1=y.b-y.a,g2=y.c-y.b;assert.ok(Math.abs(g2/g1-5)<0.01,'5 months vs 1 month gap: '+g2/g1);
+ assert.ok(o.svg.includes('fill-opacity=".45"'),'range bar drawn');assert.ok(o.cuts.length===4);
+ assert.ok(ex.isRange(E[3])&&!ex.isRange(E[0]));
+});
