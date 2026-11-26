@@ -194,26 +194,25 @@ function exportState(){
 let exportFmt='png',printingNow=false;
 function printSheet(kind,st,out){
  const sh=$('printSheet');sh.textContent='';const el=(t,txt,cls)=>{const n=document.createElement(t);if(txt!=null)n.textContent=txt;if(cls)n.className=cls;return n;};
- sh.append(el('h1','העולם על המפה'));
- const lg=el('p',null,'pl');for(const l of st.lists){const sp=el('span',l.title);sp.style.setProperty('--c',l.color);const i=el('i');i.style.setProperty('--c',l.color);sp.prepend(i);lg.append(sp);}sh.append(lg);
+ const imgs=[];const add=(svg,h)=>{const w=el('div'),im=new Image();im.alt='';im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);w.append(im);sh.append(w);};
  if(kind==='timeline'){
-  let last='';
-  for(const e of [...st.events].sort((a,b)=>st.startIndex(a)-st.startIndex(b)||String(a.id).localeCompare(String(b.id)))){
-   const g=st.monthMode?st.formatMonth(st.startIndex(e)):st.formatYear(e.year);
-   if(g!==last){sh.append(el('h2',g));last=g;}
-   const d=el('div',null,'pe');d.style.setProperty('--c',e.color||'#888');
-   d.append(el('b',e.title),el('div',[st.label(e),e.place].filter(Boolean).join(' · ')),el('div',e.text||''));
-   if(e.publisher)d.append(el('div','מקור: '+e.publisher));if(e.source)d.append(el('small',e.source));
-   sh.append(d);
+  /* page-sized slices of the tall timeline, cut between events */
+  const PH=1450,H=out.height,cuts=(out.cuts||[]).slice().sort((x,y)=>x-y);let from=0;
+  const head=out.svg.match(/^<svg[^>]*>/)[0];
+  while(true){
+   let to=H;if(H-from>PH){const ok=cuts.filter(c=>c>from+PH*.5&&c<=from+PH);to=ok.length?ok[ok.length-1]:from+PH;}
+   const h=Math.round(to-from),tag=head.replace(/height="\d+"/,'height="'+h+'"').replace(/viewBox="[^"]*"/,'viewBox="0 '+Math.round(from)+' '+out.width+' '+h+'"');
+   add(out.svg.replace(head,tag));
+   if(to>=H)break;from=to;
   }
- }else{const w=el('div'),im=new Image();im.alt='';im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(out.svg);w.append(im);sh.append(w);}
+ }else add(out.svg);
 }
 async function exportImage(kind){
  const status=$('exportStatus');
  try{
   const st=exportState();if(!st.events.length){status.textContent='אין אירועים בבחירה הנוכחית, בחרו רשימה.';return;}
   if(exportFmt==='pdf'){
-   printSheet(kind,st,kind==='timeline'?null:HistoryExport.build(kind,st));
+   printSheet(kind,st,HistoryExport.build(kind,st));
    $('exportDialog').close();document.body.classList.add('printing');printingNow=true;
    const done=()=>{printingNow=false;document.body.classList.remove('printing');removeEventListener('afterprint',done);};addEventListener('afterprint',done);
    setTimeout(()=>print(),150);return;
