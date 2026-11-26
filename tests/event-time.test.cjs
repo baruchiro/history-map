@@ -14,8 +14,11 @@ test('default window includes 25 years either side, not arbitrary lifetimes',()=
 test('window scales with the visible timeline span, capped at 25',()=>{
  assert.equal(time.windowFor(12),0);
  assert.equal(time.windowFor(21),0);
- assert.equal(time.windowFor(400),2);
- assert.equal(time.windowFor(1000),5);
+ assert.equal(time.windowFor(61),1);
+ assert.equal(time.windowFor(240),5);
+ assert.equal(time.windowFor(400),8);
+ assert.equal(time.windowFor(1110),22);
+ assert.equal(time.windowFor(2473),25);
  assert.equal(time.windowFor(5424),25);
  assert.equal(time.windowFor(100000),25);
  assert.equal(time.windowFor(0),0);

@@ -5,7 +5,7 @@ const MAX_WINDOW=25;
 function endOf(event){return event.endYear!==undefined?event.endYear:event.year;}
 function isSpan(event){return endOf(event)!==event.year;}
 /* Nearby-year context scales with the visible timeline span: a short timeline shows a point event only in its own year, while a many-centuries one keeps the original ±25-year context. */
-function windowFor(span){return Number.isFinite(span)&&span>0?Math.min(MAX_WINDOW,Math.round(span/200)):0;}
+function windowFor(span){return Number.isFinite(span)&&span>0?Math.min(MAX_WINDOW,Math.round(span/50)):0;}
 function includes(event,year,range,window){
  const w=window===undefined?MAX_WINDOW:window;
  if(isSpan(event))return range?event.year<=year&&year<=endOf(event):event.year<=year;
