@@ -51,3 +51,4 @@ a:hover{text-decoration:underline}
 .wikipedia-intro{border-top:1px solid #C9C1AB;margin-top:20px;padding-top:12px}.wikipedia-intro h3{font-size:16px;margin:0}.wikipedia-intro p{white-space:pre-line;unicode-bidi:plaintext}.wikipedia-intro small{display:block;margin-top:6px;line-height:1.5}
 
 .work-link{display:inline-flex;align-items:center;gap:6px;margin:4px 0;font-size:12px;color:#3A352C;text-decoration:none;min-height:28px}.work-link span{text-decoration:underline}.work-icon{background:#F5C518;color:#000;border-radius:3px;padding:1px 5px;font-size:11px;font-weight:700;font-family:Arial,sans-serif;text-decoration:none}
+#yearScale{position:relative;height:14px;direction:ltr;font-size:10px;color:#6E665A;margin:-1px 0 1px}#yearScale span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap;font-variant-numeric:tabular-nums;line-height:1.2}
