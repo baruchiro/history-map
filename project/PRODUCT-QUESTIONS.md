@@ -30,3 +30,16 @@ Existing timeline tools (general purpose, none checked in depth for Hebrew/RTL o
 - Roundups: https://www.educatorstechnology.com/2022/07/history-timeline-for-teachers.html , https://blog.uvm.edu/ctl-timelines/tools/ , https://www.lilachbullock.com/free-timeline-makers/
 
 Existing sources for the 1933 topic (non-interactive timelines): Yad Vashem timeline https://www.yadvashem.org/he/holocaust/resource-center/timeline.html , USHMM "1933: Key Dates" https://encyclopedia.ushmm.org/content/en/article/1933-key-dates
+
+## הערות לתשובה למורה (עתידית)
+
+- בעל הפרויקט אינו בעל רקע בהיסטוריה.
+- הרשימות נוצרו בעזרת בינה מלאכותית, מבוססות על ויקיפדיה העברית (ובמקרים מעטים על מקור בשפה אחרת, מסומן ברשימה), ועדיין לא עברו בדיקה של היסטוריון. מומלץ לומר זאת במפורש כשמבקשים ממנה משוב.
+
+## ניתוח שימוש ברשימות (לא נבנה)
+
+- היום ה-analytics ב-PostHog משתמש רק במאפיינים קבועים; ערכים חופשיים אסורים בעיצוב.
+- כדי לדעת אילו רשימות נפתחות צריך אירוע `list_view` עם מפתח הרשימה.
+- אפשרות א: רשימת מפתחות מותרים (allowlist) שנוצרת מהקטלוג, בלי שרת. נשארת אנונימית ותחומה. מבחן בודק שהרשימה שווה למפתחות הקטלוג.
+- אפשרות ב: שרת שאוסף ערכים חופשיים. משטח פרטיות גדול יותר ותחזוקה.
+- המלצה: אפשרות א, וספירה רק בבחירה או פתיחה מפורשת של רשימה.
