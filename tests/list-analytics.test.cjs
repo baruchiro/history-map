@@ -14,5 +14,5 @@ test('worker allowlist equals the catalog keys',()=>{
 });
 test('list change hook runs in the capture phase (the picker re-renders on change)',()=>{
  const h=fs.readFileSync(__dirname+'/../docs/analytics-hooks.js','utf8');
- assert.ok(/addEventListener\('change',e=>\{if\(e\.target\.matches\('#listChoices input'\)\)[\s\S]*?\},true\)/.test(h));
+ a.ok(/addEventListener\('change',e=>\{if\(e\.target\.matches\('#listChoices input'\)\)[\s\S]*?\},true\)/.test(h));
 });
