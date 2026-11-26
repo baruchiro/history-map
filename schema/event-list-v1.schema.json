@@ -63,6 +63,12 @@
                     "const": 0
                   }
                 },
+                "month": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 12,
+                  "description": "Optional month (1-12) of the event, or of a span's first year. Only for common-era years. When a timeline's events span three years or less and at least one has a month, the map shows a month-by-month timeline."
+                },
                 "endYear": {
                   "type": "integer",
                   "minimum": -5000,

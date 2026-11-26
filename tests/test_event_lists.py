@@ -88,4 +88,21 @@ class ListsTests(unittest.TestCase):
         self.event()['endYear']=2024
         self.assertNotEqual(base, compile_lists(self.data)['items'][0]['id'])
 
+    def test_month_accepted_and_changes_id(self):
+        base=compile_lists(copy.deepcopy(self.data))['items'][0]
+        self.event()['year']=1933; self.event()['month']=3
+        item=compile_lists(self.data)['items'][0]
+        self.assertEqual(item['month'],3)
+        self.assertNotEqual(item['id'],base['id'])
+    def test_month_range_and_type(self):
+        for bad in (0,13,'3',3.5,True):
+            self.event()['year']=1933; self.event()['month']=bad; self.bad()
+    def test_month_not_for_bce(self):
+        self.event()['year']=-500; self.event()['month']=3; self.bad()
+    def test_month_sorts_within_year(self):
+        a=self.event(); a['year']=1933; a['month']=7
+        b=copy.deepcopy(a); b['month']=2; b['title']='Earlier in the year'
+        self.data['lists'][0]['events']=[a,b]
+        self.assertEqual([e['month'] for e in compile_lists(self.data)['items']],[2,7])
+
 if __name__=='__main__': unittest.main()

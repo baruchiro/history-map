@@ -69,3 +69,35 @@ test('shared modes remain backward compatible, corrected view uses range',()=>{
  assert.equal(view.decode('#v=1&y=1922&mode=all').range,false);
  assert.equal(view.decode('#v=1&y=1922&mode=range').range,true);
 });
+
+test('month resolution: index, label and month mode',()=>{
+ const m=(year,month,extra={})=>({year,month,...extra});
+ assert.equal(time.startIndex(m(1933,3)),1933*12+2);
+ assert.equal(time.startIndex({year:1933}),1933*12);
+ assert.equal(time.endIndex({year:1933}),1933*12+11);
+ assert.equal(time.endIndex(m(1933,3)),1933*12+2);
+ assert.equal(time.endIndex(m(1933,3,{endYear:1934})),1934*12+11);
+ assert.equal(time.label(m(1933,3),String),'מרץ 1933');
+ assert.equal(time.label({year:1933},String),'1933');
+ assert.equal(time.formatMonth(1933*12+0,String),'ינואר 1933');
+ assert.equal(time.monthMode([m(1933,1),m(1933,12)]),true);
+ assert.equal(time.monthMode([m(1933,1),{year:1933}]),true);
+ assert.equal(time.monthMode([{year:1933},{year:1934}]),false,'no month, stays in years');
+ assert.equal(time.monthMode([m(1933,1),m(1945,5)]),false,'wide span stays in years');
+ assert.equal(time.monthMode([m(-44,3),m(-43,1)]),false,'BCE stays in years');
+ assert.equal(time.monthMode([]),false);
+});
+test('month resolution: visibility by month, whole-year events show all year',()=>{
+ const e=(year,month)=>({year,month});
+ const idx=(y,mo)=>y*12+mo-1;
+ assert.equal(time.includesMonth(e(1933,3),idx(1933,3),true),true);
+ assert.equal(time.includesMonth(e(1933,3),idx(1933,4),true),false);
+ assert.equal(time.includesMonth(e(1933,3),idx(1933,2),true),false);
+ assert.equal(time.includesMonth(e(1933,3),idx(1933,4),false),true,'all-up-to-now mode');
+ assert.equal(time.includesMonth({year:1933},idx(1933,9),true),true);
+ assert.equal(time.includesMonth({year:1933},idx(1934,1),true),false);
+ const span={year:1933,month:6,endYear:1934};
+ assert.equal(time.includesMonth(span,idx(1933,5),true),false);
+ assert.equal(time.includesMonth(span,idx(1933,6),true),true);
+ assert.equal(time.includesMonth(span,idx(1934,12),true),true);
+});
