@@ -1,0 +1,10 @@
+name = "history-map-analytics"
+main = "src/index.js"
+compatibility_date = "2025-11-01"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "history-map-analytics"
+database_id = "1f6b051b-f297-4c09-bdc5-2351af4a864d"
+migrations_dir = "migrations"

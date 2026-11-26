@@ -1,7 +1,7 @@
 (function(){
  const status=document.getElementById('analyticsStatus'),browser=document.getElementById('analyticsBrowserStatus');
  function refresh(){
-  status.textContent='מדידת פעילות בסיסית מופעלת. דפדפנים מוחרגים אינם שולחים אירועי שימוש.';
+  status.textContent='מדידת פעילות בסיסית מופעלת, כולל ספירה אנונימית של הרשימות שנבחרות (שם הרשימה בלבד, בלי כתובת IP ובלי מזהה). דפדפנים מוחרגים אינם שולחים אירועי שימוש.';
   try{const excluded=localStorage.getItem('history-map.analytics.exclude.v1')==='1';browser.textContent=excluded?'הדפדפן הזה מוחרג ממדידת שימוש.':'הדפדפן הזה עדיין לא מסומן כמוחרג.';}catch{browser.textContent='לא ניתן לשמור החרגה בדפדפן הזה. המדידה חסומה בו.';}
  }
  document.getElementById('excludeBrowser').onclick=()=>{historyAnalytics.setExcluded(true);refresh();};
