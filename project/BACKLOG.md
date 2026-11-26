@@ -12,7 +12,7 @@ These are candidate outcomes, not automatic authority to spend, contact people, 
 | VIEW01 | Later | Proposed | Explore structured query-to-view contract reusing public list IDs and URL state. Prove it against stories before creating a backend. |
 | DATA01 | Next | Proposed | Improve explicit stable event IDs/version history before supporting edits and updates. Preserve existing shared links or document migration. |
 | DISC01 | Later research | Proposed | Publisher/archive map as an additional discovery route. Verify existing navigation, one issue's content model, rights and actual usefulness before proposing a pilot. No assumed partnership or copied issue content. |
-| EXPORT01 | Later | Idea | Investigate print/image export, timeline-only view and embedding using real stories and rights limits. Do not clutter the primary map. |
+| EXPORT01 | Later | Idea | Investigate print/image export, timeline-only view and embedding using real stories and rights limits. Do not clutter the primary map. Related open product question: PRODUCT-QUESTIONS.md (single-place timeline need). |
 | POD01 | Later | Idea | Topic/podcast-related lists, with consent, sources and uncertainty. Not a built importer or content license. |
 | GOV01 | Before outside merges | Maintainer decision needed | Inspect current branch/ruleset settings and choose required checks/reviews and real reviewers. Documentation is not enforcement; do not change permissions or invite collaborators without approval. |
 
