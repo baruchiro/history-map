@@ -12,3 +12,7 @@ test('worker allowlist equals the catalog keys',()=>{
  const al=JSON.parse(fs.readFileSync(__dirname+'/../workers/analytics/allowed-lists.json','utf8')).lists;
  a.deepEqual(al,cat,'run python3 scripts/sync_allowed_lists.py');
 });
+test('list change hook runs in the capture phase (the picker re-renders on change)',()=>{
+ const h=fs.readFileSync(__dirname+'/../docs/analytics-hooks.js','utf8');
+ assert.ok(/addEventListener\('change',e=>\{if\(e\.target\.matches\('#listChoices input'\)\)[\s\S]*?\},true\)/.test(h));
+});
