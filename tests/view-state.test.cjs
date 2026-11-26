@@ -16,3 +16,10 @@ test('many selected lists, empty selection and legacy pair are distinct',()=>{
  const legacy=v.decode('#v=1&a=list-0&b=list-1',names);assert.equal(legacy.lists,undefined);assert.equal(legacy.a,'list-0');
  assert.deepEqual(v.decode('#v=1&lists=list-0,list-0,https://bad.invalid,unknown',names).lists,['list-0']);
 });
+
+test('month round-trips and bad months are ignored',()=>{
+ const base={year:1933,a:'one',b:'two',range:true,borders:false,search:'',map:[0,0,720,360],event:''};
+ assert.equal(v.decode(v.encode({...base,month:3}),['one','two']).month,3);
+ assert.equal(v.decode(v.encode({...base,month:0}),['one','two']).month,undefined);
+ for(const m of ['0','13','1.5','x',''])assert.equal(v.decode('#v=1&y=1933&m='+m).month,undefined);
+});
