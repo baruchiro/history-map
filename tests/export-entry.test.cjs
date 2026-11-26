@@ -19,3 +19,13 @@ test('PDF format toggle exists and prints through a dedicated sheet',()=>{
  assert.ok(html.includes('data-fmt="png"')&&html.includes('data-fmt="pdf"')&&html.includes('id="printSheet"'));
  assert.ok(app.includes("exportFmt==='pdf'")&&app.includes('print()')&&app.includes('printingNow'));
 });
+test('former text-only buttons are icon buttons with accessible names',()=>{
+ for(const id of ['goYear','copyShare','prev','next','play','excludeBrowser','includeBrowser','copyPrompt']){
+  const m=html.match(new RegExp('<button[^>]*id="'+id+'"[^>]*>.*?</button>'));assert.ok(m,id);
+  assert.ok(/aria-label="[^"]+"/.test(m[0])&&/title="[^"]+"/.test(m[0])&&m[0].includes('<svg'),id);
+  assert.equal(m[0].replace(/<svg.*<\/svg>/,'').replace(/<[^>]+>/g,'').trim(),'',id+' has no visible text');
+ }
+ const tabs=html.match(/<button[^>]*data-settings=[^>]*>.*?<\/button>/g);assert.equal(tabs.length,3);
+ for(const t of tabs)assert.ok(t.includes('<svg')&&/aria-label="[^"]+"/.test(t));
+ assert.ok(app.includes('PAUSESVG')&&app.includes('PLAYSVG'));
+});
