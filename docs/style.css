@@ -52,3 +52,5 @@ a:hover{text-decoration:underline}
 
 .work-link{display:inline-flex;align-items:center;gap:6px;margin:4px 0;font-size:12px;color:#3A352C;text-decoration:none;min-height:28px}.work-link span{text-decoration:underline}.work-icon{background:#F5C518;color:#000;border-radius:3px;padding:1px 5px;font-size:11px;font-weight:700;font-family:Arial,sans-serif;text-decoration:none}
 .export-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}.export-row button{flex:1 1 30%;min-height:44px}#yearScale{position:relative;height:14px;direction:ltr;font-size:10px;color:#6E665A;margin:-1px 0 1px}#yearScale span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap;font-variant-numeric:tabular-nums;line-height:1.2}
+
+.basic-bar #exportView{position:fixed;left:14px;top:72px}.basic-bar #reset{top:128px!important}#advanced{top:184px!important}.year-editing #exportView{visibility:hidden}
