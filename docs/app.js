@@ -94,9 +94,9 @@ function renderTimelineTicks(events){
  const width=rail.clientWidth,min=Number($('time').min),max=Number($('time').max),inset=8;
  if(!width)return;
  const positions=events.map(e=>({e,x:inset+(1-(e.year-min)/(max-min))*(width-2*inset)})).sort((a,b)=>a.x-b.x);
- // Exact marks retain their dates. Hit areas are separately clustered to avoid overlapping buttons.
- let last=-100;
- for(const p of positions){if(p.x-last<3)continue;const tick=text('i','');tick.style.left=p.x+'px';tick.className='event-tick '+p.e.shape;tick.style.background=p.e.color||'#A83A29';tick.setAttribute('aria-hidden','true');rail.append(tick);last=p.x;}
+ // Exact marks retain their dates. A second stacked lane keeps same-year or touching marks visible instead of dropping them; the cluster badge conveys the rest. Hit areas are separately clustered to avoid overlapping buttons.
+ const lanes=[-100,-100];
+ for(const p of positions){const lane=lanes.findIndex(x=>p.x-x>=8);if(lane<0)continue;lanes[lane]=p.x;const tick=text('i','');tick.style.left=p.x+'px';tick.className='event-tick '+p.e.shape+(lane?' lane2':'');tick.style.background=p.e.color||'#A83A29';tick.setAttribute('aria-hidden','true');rail.append(tick);}
  const bins=new Map(),n=Math.max(1,Math.floor(width/44));
  for(const p of positions){const key=Math.min(n-1,Math.floor(p.x/width*n));if(!bins.has(key))bins.set(key,[]);bins.get(key).push(p);}
  for(const [key,items]of bins){const es=items.map(p=>p.e).sort((a,b)=>a.year-b.year),button=text('button','');button.type='button';button.className='tick-hit';button.style.left=key/n*100+'%';button.style.width=100/n+'%';button.setAttribute('aria-label',es.length===1?formatYear(es[0].year)+': '+es[0].title:es.length+' אירועים בין '+formatYear(es[0].year)+' ל־'+formatYear(es.at(-1).year));button.title=button.getAttribute('aria-label');

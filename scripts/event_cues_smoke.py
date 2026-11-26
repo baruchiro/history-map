@@ -39,7 +39,7 @@ with sync_playwright() as p:
   assert page.evaluate('chosenLists.size')==0;assert page.locator('.event-tick').count()==0
   page.locator('#advanced .close-panel').click()
   # Legacy links recover the selected pair, year and framing without requiring the new lists field.
-  page.goto(base+'#v=1&y=1969&a=voyages-and-encounters&b=science-and-technology&mode=range&borders=1&map=0,0,720,360');page.wait_for_selector('#borders path')
+  page.goto(base+'#v=1&y=1969&a=voyages-and-encounters&b=science-and-technology&mode=range&borders=1&map=0,0,720,360');page.wait_for_selector('#borders path');assert page.locator('.event-tick.square').count()>0
   assert page.evaluate('chosenLists.size')==2;assert page.locator('#world').get_attribute('viewBox')=='0 0 720 360'
   # Dense synthetic events at one location must not produce overlapping title blocks.
   page.evaluate("year=1969;renderMapLabels(Array.from({length:30},(_,i)=>({id:'dense'+i,title:'אירוע לדוגמה '+i,year:1969,lon:-80,lat:30,listKey:'dense',shape:'circle',color:'#547c76'})),null)")
