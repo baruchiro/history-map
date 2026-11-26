@@ -7,7 +7,13 @@ import math
 import re
 from pathlib import Path
 
-LIMIT = 14500
+# Per-list compiled-size guard. The public site serves lists from the static
+# catalog (docs/site/catalog.json), which is fetched over HTTP and has no 14500-byte
+# storage constraint; the original 14500-byte limit came from the prototype's
+# personal-library import fallback. Curriculum lists (e.g. WWII and the Holocaust)
+# legitimately need 30-50 sourced events, so the guard is raised to 51200 bytes,
+# still small enough to keep the import fallback and mobile rendering safe.
+LIMIT = 51200
 
 def require(ok, message):
     if not ok:
