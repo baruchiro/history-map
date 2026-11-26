@@ -4,7 +4,7 @@ document.addEventListener('click',e=>{
  if(el.closest('#eventTicks,#timelineEventChoices')||['prev','next','play'].includes(el.id))historyAnalytics.record('timeline_event');
  if(el.id==='copyView')historyAnalytics.record('share_open');
 },true);
-document.addEventListener('change',e=>{if(e.target.matches('#listChoices input'))historyAnalytics.record('collection_change');});
+document.addEventListener('change',e=>{if(e.target.matches('#listChoices input')){historyAnalytics.record('collection_change');if(e.target.checked)historyAnalytics.recordList(e.target.value);}});
 let historyPointer=null;
 document.addEventListener('pointerdown',e=>{if(e.target.closest('#world'))historyPointer={x:e.clientX,y:e.clientY};});
 document.addEventListener('pointerup',e=>{if(historyPointer&&Math.hypot(e.clientX-historyPointer.x,e.clientY-historyPointer.y)>5)historyAnalytics.record('map_interaction');historyPointer=null;});

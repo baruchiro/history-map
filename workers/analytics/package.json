@@ -1,0 +1,1 @@
+{"name":"history-map-analytics","private":true,"version":"1.0.0","description":"Counts which lists are opened. Standalone Cloudflare Worker + D1; no personal data.","scripts":{"test":"node --test test/*.cjs","deploy":"wrangler deploy"},"devDependencies":{"wrangler":"^4.0.0"}}

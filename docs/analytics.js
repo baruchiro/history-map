@@ -4,6 +4,7 @@
 const STORE='history-map.analytics.exclude.v1';
 const EVENTS=Object.freeze(['app_open','map_interaction','event_open','timeline_event','collection_change','share_open','share_copy']);
 // Publication IDs identify posts, never visitors. All transmitted values are constants.
+const LIST_ENDPOINT='https://history-map-analytics.baruchiro.workers.dev/list-view';
 const CAMPAIGN='history-map-first-look-202611';
 const PUBLICATIONS=Object.freeze({
  'wa-channel-01':['whatsapp','owned-channel'], 'wa-status-01':['whatsapp','status'],
@@ -64,7 +65,15 @@ function make(env,config={}){
   const payload={api_key:config.token,event:'history_map_'+name,distinct_id:id,properties:{app:'history-map',schema_version:1,$process_person_profile:false,...labels}};
   try{const p=env.fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'cors',credentials:'omit',referrerPolicy:'no-referrer',keepalive:true});p.catch(()=>{});return true;}catch{return false;}
  }
- return {bootstrap,record,reason,setExcluded};
+ /* Which list was opened: only a catalog key, once per list per page load, under the same exclusion rules as every other event. The Worker rejects any key that is not in the catalog. */
+ const listSent=new Set(),LIST_KEY=/^[a-z0-9][a-z0-9-]{1,80}$/;
+ function recordList(key){
+  if(reason()||typeof key!=='string'||!LIST_KEY.test(key)||listSent.has(key))return false;
+  if(config.list_endpoint!==LIST_ENDPOINT)return false;
+  listSent.add(key);
+  try{const p=env.fetch(config.list_endpoint,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({list:key}),mode:'cors',credentials:'omit',referrerPolicy:'no-referrer',keepalive:true});p.catch(()=>{});return true;}catch{return false;}
+ }
+ return {bootstrap,record,recordList,reason,setExcluded};
 }
-if(typeof module!=='undefined'&&module.exports)module.exports={make,STORE,EVENTS,attribution,PUBLICATIONS,CAMPAIGN,deviceClass};else root.HistoryAnalytics={make};
+if(typeof module!=='undefined'&&module.exports)module.exports={LIST_ENDPOINT,make,STORE,EVENTS,attribution,PUBLICATIONS,CAMPAIGN,deviceClass};else root.HistoryAnalytics={make};
 })(typeof globalThis!=='undefined'?globalThis:this);
