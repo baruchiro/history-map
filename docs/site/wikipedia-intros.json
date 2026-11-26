@@ -819,6 +819,71 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:2189311": {
+      "language": "he",
+      "pageId": 2189311,
+      "title": "הבחירות הכלליות בגרמניה הנאצית (מרץ 1933)",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%91%D7%97%D7%99%D7%A8%D7%95%D7%AA_%D7%94%D7%9B%D7%9C%D7%9C%D7%99%D7%95%D7%AA_%D7%91%D7%92%D7%A8%D7%9E%D7%A0%D7%99%D7%94_%D7%94%D7%A0%D7%90%D7%A6%D7%99%D7%AA_(%D7%9E%D7%A8%D7%A5_1933)",
+      "revisionId": 44198699,
+      "retrievedAt": "2026-11-26T15:44:15.216255+00:00",
+      "excerpt": "הבחירות הכלליות נערכו בגרמניה הנאצית ב-5 במרץ 1933, פחות מחודש וחצי לאחר עליית הנאצים לשלטון, ורק שישה ימים לאחר שרפת הרייכסטאג. לפני הבחירות הובילו האס אה והאס אס מסע אלימות רחב כנגד אנשי שמאל רבים, ובהם חברי המפלגה הקומוניסטית (KPD), האיגודים המקצועיים, המפלגה הסוציאל-דמוקרטית ומפלגת המרכז. אלו היו הבחירות הרב-מפלגתיות האחרונות בגרמניה המאוחדת עד בחירות 1990.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:632867": {
+      "language": "he",
+      "pageId": 632867,
+      "title": "חוק לשיקום שירות המדינה המקצועי",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A7_%D7%9C%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_%D7%94%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99",
+      "revisionId": 44238157,
+      "retrievedAt": "2026-11-26T15:44:18.356322+00:00",
+      "excerpt": "חוק לשיקום שירות המדינה המקצועי (בגרמנית: Gesetz zur Wiederherstellung des Berufsbeamtentums; מקובל גם בשם חוק בדבר השבת הפקידות המקצועית על כנה) היה חוק שנחקק בגרמניה הנאצית ב-7 באפריל 1933, כחודשיים לאחר עלייתו לשלטון של אדולף היטלר. החוק בוטל על ידי בעלות הברית בספטמבר 1945.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:70829": {
+      "language": "he",
+      "pageId": 70829,
+      "title": "הסכם העברה",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%A1%D7%9B%D7%9D_%D7%94%D7%A2%D7%91%D7%A8%D7%94",
+      "revisionId": 43974337,
+      "retrievedAt": "2026-11-26T15:44:21.511625+00:00",
+      "excerpt": "הסכם העברה (\"טרנספר\") היה הסכם שנחתם ב-25 באוגוסט 1933 בין השלטונות הנאציים לבין הסוכנות היהודית. יוזם ההסכם היה איש העסקים היהודי-גרמני סם כהן. מטרת ההסכם הייתה לאפשר ליהודי גרמניה למכור נכסי דלא ניידי, טובין ורכוש אחר, הנמצאים בבעלותם בשטחים שתחת שלטון גרמניה הנאצית, וזאת טרם יופקע בידי השלטונות, להעביר את תמורת המכירה לארץ ישראל בסחורות שנרכשו בגרמניה, והפדיון ממכירתן בארץ ישיב לעולים מקרב יהודי גרמניה חלק מהונם ויקל על קליטתם.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:2194567": {
+      "language": "he",
+      "pageId": 2194567,
+      "title": "הבחירות הכלליות בגרמניה הנאצית (נובמבר 1933)",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%94%D7%91%D7%97%D7%99%D7%A8%D7%95%D7%AA_%D7%94%D7%9B%D7%9C%D7%9C%D7%99%D7%95%D7%AA_%D7%91%D7%92%D7%A8%D7%9E%D7%A0%D7%99%D7%94_%D7%94%D7%A0%D7%90%D7%A6%D7%99%D7%AA_(%D7%A0%D7%95%D7%91%D7%9E%D7%91%D7%A8_1933)",
+      "revisionId": 44198700,
+      "retrievedAt": "2026-11-26T15:44:24.661880+00:00",
+      "excerpt": "הבחירות הכלליות בגרמניה הנאצית שהתקיימו ב-12 בנובמבר 1933 היו הבחירות הראשונות מאז תפסה המפלגה הנאצית את השלטון במלואו, עם העברת \"חוק ההסמכה\" במרץ אותה שנה. עד למועד הבחירות, נאסרה השתתפותן של כל מפלגות האופוזיציה, ולבוחרים הוצגה רשימה יחידה של המפלגה הנאצית ו-22 \"אורחים\" שלה, שלא היו חברי מפלגה. \"אורחים\" אלה, שכללו אנשים כמו אלפרד הוגנברג, ממילא תמכו באופן מלא בשלטונו של אדולף היטלר ובמשטרו. בחירות אלו נתנו את הטון לכל הבחירות ומשאלי העם הנוספים שנערכו בעידן הנאצי.",
+      "modified": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
+    },
+    "he:2479998": {
+      "language": "he",
+      "pageId": 2479998,
+      "title": "חזית העבודה הגרמנית",
+      "sourceUrl": "https://he.wikipedia.org/wiki/%D7%97%D7%96%D7%99%D7%AA_%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94_%D7%94%D7%92%D7%A8%D7%9E%D7%A0%D7%99%D7%AA",
+      "revisionId": 42511980,
+      "retrievedAt": "2026-11-26T15:44:27.814425+00:00",
+      "excerpt": "חזית העבודה הגרמנית (בגרמנית: Deutsche Arbeitsfront) היה ארגון עובדים הלאומי של המפלגה הנאצית, שהחליף את איגודי העובדים העצמאיים השונים בגרמניה במהלך תהליך ההאחדה שהנהיגו הנאצים בגרמניה הנאצית.",
+      "modified": false,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "method": "TextExtracts plain-text lead; first nonempty paragraph, max 1200 chars"
     }
   }
 }
