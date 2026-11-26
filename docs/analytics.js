@@ -21,9 +21,18 @@ function attribution(href){
   return {attribution_source:entry[0],attribution_medium:entry[1],attribution_campaign:CAMPAIGN,attribution_publication:publication};
  }catch{return {};}
 }
+/* Coarse device class only: phone, tablet or desktop. Derived from pointer type and the short screen side; no model, browser, OS or exact size is sent. Omitted when the browser cannot tell. */
+function deviceClass(env){
+ try{
+  if(typeof env.matchMedia!=='function')return {};
+  if(!env.matchMedia('(pointer: coarse)').matches)return {device_class:'desktop'};
+  const s=env.screen,short=s?Math.min(s.width,s.height):Math.min(env.innerWidth||0,env.innerHeight||0);
+  return {device_class:short&&short<600?'phone':'tablet'};
+ }catch{return {};}
+}
 function make(env,config={}){
  const sent=new Set();let id=null;
- const labels=attribution(env.location.href);
+ const labels={...attribution(env.location.href),...deviceClass(env)};
  function readExcluded(){return env.localStorage.getItem(STORE)==='1';}
  function reason(){
   if(config.enabled!==true)return 'disabled';
@@ -57,5 +66,5 @@ function make(env,config={}){
  }
  return {bootstrap,record,reason,setExcluded};
 }
-if(typeof module!=='undefined'&&module.exports)module.exports={make,STORE,EVENTS,attribution,PUBLICATIONS,CAMPAIGN};else root.HistoryAnalytics={make};
+if(typeof module!=='undefined'&&module.exports)module.exports={make,STORE,EVENTS,attribution,PUBLICATIONS,CAMPAIGN,deviceClass};else root.HistoryAnalytics={make};
 })(typeof globalThis!=='undefined'?globalThis:this);
